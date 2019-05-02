@@ -48,6 +48,11 @@
             android:label="ATD"
             android:parentActivityName="com.example.android.tflitecamerademo.MainActivity" >
         </activity>
+        <activity
+            android:name="com.example.android.tflitecamerademo.RouteGuideActivity"
+            android:label="ATD"
+            android:parentActivityName="com.example.android.tflitecamerademo.MainActivity" >
+        </activity>
 
         <meta-data
             android:name="android.support.VERSION"

@@ -868,7 +868,7 @@ id barrier
 id beginning
 id blocking
 id bottom
-id button
+id button2
 id buttonPanel
 id cancel_action
 id center
@@ -901,6 +901,7 @@ id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
+id exit_route_guide_button
 id expand_activities_button
 id expanded_menu
 id fill
@@ -908,9 +909,11 @@ id fill_horizontal
 id fill_vertical
 id fixed
 id forever
+id get_feature_button
 id gone
 id home
 id homeAsUp
+id host_edit_text
 id icon
 id icon_group
 id ifRoom
@@ -924,6 +927,7 @@ id left
 id line1
 id line3
 id listMode
+id list_features_button
 id list_item
 id masked
 id media_actions
@@ -945,14 +949,18 @@ id parent
 id parentPanel
 id percent
 id pin
+id port_edit_text
 id progress_circular
 id progress_horizontal
 id radio
+id record_route_button
 id recyclerView
 id relat
+id result_text
 id right
 id right_icon
 id right_side
+id route_chat_button
 id screen
 id scroll
 id scrollIndicatorDown
@@ -988,6 +996,7 @@ id src_in
 id src_over
 id standard
 id start
+id start_route_guide_button
 id status_bar_latest_event_content
 id subTitle
 id submenuarrow
@@ -1057,6 +1066,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout activity_camera
 layout activity_main
+layout activity_routeguide
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar

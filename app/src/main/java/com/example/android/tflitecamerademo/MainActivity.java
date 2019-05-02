@@ -26,6 +26,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -37,6 +38,7 @@ public class MainActivity extends Activity {
 
     // Member variables.
     private RecyclerView mRecyclerView;
+    private Button grpcButton;
     private ArrayList<Sport> mSportsData;
     private SportsAdapter mAdapter;
     private static final String LOG_TAG =
@@ -46,7 +48,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        grpcButton =  findViewById(R.id.button2) ;
         // Initialize the RecyclerView.
+
         mRecyclerView = findViewById(R.id.recyclerView);
         // Set the Layout Manager.
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -90,6 +94,15 @@ public class MainActivity extends Activity {
         mAdapter.notifyDataSetChanged();
     }
 
+
+    public void launchGrpcActivity(View view) {
+
+        Intent intent = new Intent(this, RouteGuideActivity.class);
+        startActivity(intent);
+
+
+        Log.d(LOG_TAG, "Button2 clicked!");
+    }
     public void launchSecondActivity(View view) {
 
         Intent intent = new Intent(this, CameraActivity.class);
