@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:18:1-54:12
-INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:18:1-54:12
-INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:18:1-54:12
-INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:18:1-54:12
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:18:1-54:12
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:18:1-54:12
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:18:1-54:12
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:18:1-54:12
 MERGED from [com.android.support:design:25.2.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/design-25.2.0.aar/5d75cc943ce09cd9a793426bf2cc11a8/AndroidManifest.xml:17:1-27:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/76b4beabcce1ac04bba0424ff6457ecd/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/d5cbe1c4b1a6f8d1136937c70e0f9fd6/AndroidManifest.xml:2:1-11:12
@@ -21,37 +21,37 @@ MERGED from [com.android.support:support-core-utils:26.1.0] /Users/apple/.gradle
 MERGED from [com.android.support:support-compat:26.1.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/b9de09db1098c735f6b4057903e6a242/AndroidManifest.xml:17:1-31:12
 MERGED from [org.tensorflow:tensorflow-lite:1.13.1] /Users/apple/.gradle/caches/transforms-1/files-1.1/tensorflow-lite-1.13.1.aar/2b3f2c816e1febb42f3dfa3b9d66a7ae/AndroidManifest.xml:2:1-11:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/37500ac8319d1b4584eee06d3603a43c/AndroidManifest.xml:17:1-30:12
-INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:18:1-54:12
-INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:18:1-54:12
-INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:18:1-54:12
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:18:1-54:12
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:18:1-54:12
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:18:1-54:12
 	package
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:19:5-51
-		INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:19:5-51
+		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:18:1-54:12
-		INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:18:1-54:12
+		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:18:1-54:12
-		INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:18:1-54:12
+		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:18:11-69
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:18:11-69
 uses-permission#android.permission.CAMERA
-ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:21:5-65
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:21:5-65
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:21:22-62
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:21:22-62
 uses-feature#android.hardware.camera
-ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:23:5-60
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:23:5-60
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:23:19-57
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:23:19-57
 uses-feature#android.hardware.camera.autofocus
-ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:24:5-70
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:24:5-70
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:24:19-67
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:24:19-67
 application
-ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:26:5-52:19
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:26:5-52:19
 MERGED from [com.android.support:design:25.2.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/design-25.2.0.aar/5d75cc943ce09cd9a793426bf2cc11a8/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:design:25.2.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/design-25.2.0.aar/5d75cc943ce09cd9a793426bf2cc11a8/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/76b4beabcce1ac04bba0424ff6457ecd/AndroidManifest.xml:25:5-29:19
@@ -87,49 +87,49 @@ MERGED from [org.tensorflow:tensorflow-lite:1.13.1] /Users/apple/.gradle/caches/
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/37500ac8319d1b4584eee06d3603a43c/AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/37500ac8319d1b4584eee06d3603a43c/AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:30:9-35
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:30:9-35
 	android:label
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:27:9-28
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:27:9-28
 	android:icon
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:28:9-45
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:28:9-45
 	android:allowBackup
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:26:18-44
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:26:18-44
 	android:theme
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:31:9-40
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:31:9-40
 activity#com.example.android.tflitecamerademo.MainActivity
-ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:33:9-39:20
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:33:9-39:20
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:33:19-83
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:33:19-83
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:34:13-38:29
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:34:13-38:29
 action#android.intent.action.MAIN
-ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:35:17-69
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:35:25-66
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:37:17-77
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:37:17-77
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:37:27-74
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:37:27-74
 activity#com.example.android.tflitecamerademo.CameraActivity
-ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:41:9-46:20
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:41:9-46:20
 	android:parentActivityName
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:43:13-55
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:43:13-55
 	android:label
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:42:19-38
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:42:19-38
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:41:19-49
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:41:19-49
 activity#com.example.android.tflitecamerademo.RouteGuideActivity
-ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:47:9-51:20
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:47:9-51:20
 	android:parentActivityName
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:49:13-55
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:49:13-55
 	android:label
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:48:13-32
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:48:13-32
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml:47:19-53
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:47:19-53
 uses-sdk
-INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
-INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
 MERGED from [com.android.support:design:25.2.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/design-25.2.0.aar/5d75cc943ce09cd9a793426bf2cc11a8/AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:design:25.2.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/design-25.2.0.aar/5d75cc943ce09cd9a793426bf2cc11a8/AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/76b4beabcce1ac04bba0424ff6457ecd/AndroidManifest.xml:21:5-23:78
@@ -164,18 +164,18 @@ MERGED from [org.tensorflow:tensorflow-lite:1.13.1] /Users/apple/.gradle/caches/
 MERGED from [org.tensorflow:tensorflow-lite:1.13.1] /Users/apple/.gradle/caches/transforms-1/files-1.1/tensorflow-lite-1.13.1.aar/2b3f2c816e1febb42f3dfa3b9d66a7ae/AndroidManifest.xml:5:5-7:41
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/37500ac8319d1b4584eee06d3603a43c/AndroidManifest.xml:20:5-22:41
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/37500ac8319d1b4584eee06d3603a43c/AndroidManifest.xml:20:5-22:41
-INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
-INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:25.2.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/design-25.2.0.aar/5d75cc943ce09cd9a793426bf2cc11a8/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
-		ADDED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
 ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/76b4beabcce1ac04bba0424ff6457ecd/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:cardview-v7:26.1.0] /Users/apple/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/87b4f1d438e320a5a114d6a3d3ec5fb6/AndroidManifest.xml:23:9-25:38

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/Users/apple/Documents/finalProject/ATD_V_1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "/Users/apple/.gradle/caches/transforms-1/files-1.1/design-25.2.0.aar/5d75cc943ce09cd9a793426bf2cc11a8/res/values-v21/values-v21.xml",
@@ -42,7 +42,7 @@
                     }
                 },
                 {
-                    "source": "/Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/res/values-v21/base-template-styles.xml",
+                    "source": "/Users/apple/Documents/finalProject/ATD_V_1/app/src/main/res/values-v21/base-template-styles.xml",
                     "from": {
                         "startLines": "20",
                         "startColumns": "4",

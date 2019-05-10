@@ -1,8 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/apple/Documents/finalProject/ATD_V_1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
+                {
+                    "source": "/Users/apple/Documents/finalProject/ATD_V_1/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "43,57,29,19,17,24,16,18,23,25,22,21,20",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1613,2139,1226,823,689,1121,645,739,1051,1171,1006,955,906",
+                        "endLines": "55,69,41,19,17,24,16,18,23,25,22,21,20",
+                        "endColumns": "12,19,19,82,49,49,43,83,69,51,44,50,48",
+                        "endOffsets": "2133,2727,1607,901,734,1166,684,818,1116,1218,1046,1001,950"
+                    },
+                    "to": {
+                        "startLines": "2,15,28,488,490,501,507,508,510,512,513,514,515",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "100,625,1218,28638,28808,29177,30042,30086,30223,30364,30416,30461,30512",
+                        "endLines": "14,27,40,488,490,501,507,508,510,512,513,514,515",
+                        "endColumns": "12,19,19,82,49,49,43,83,69,51,44,50,48",
+                        "endOffsets": "620,1213,1599,28716,28853,29222,30081,30165,30288,30411,30456,30507,30556"
+                    }
+                },
                 {
                     "source": "/Users/apple/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/d5cbe1c4b1a6f8d1136937c70e0f9fd6/res/values/values.xml",
                     "from": {
@@ -59,20 +78,20 @@
                     }
                 },
                 {
-                    "source": "/Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/res/values/colors.xml",
+                    "source": "/Users/apple/Documents/finalProject/ATD_V_1/app/src/main/res/values/template-dimens.xml",
                     "from": {
-                        "startLines": "20,18,19,17",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "799,701,748,646",
-                        "endColumns": "45,46,50,54",
-                        "endOffsets": "840,743,794,696"
+                        "startLines": "28,24,23,22,21,20,29",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "959,880,836,791,748,706,1029",
+                        "endColumns": "69,42,43,44,42,41,67",
+                        "endOffsets": "1024,918,875,831,786,743,1092"
                     },
                     "to": {
-                        "startLines": "196,197,198,199",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "9501,9547,9594,9645",
-                        "endColumns": "45,46,50,54",
-                        "endOffsets": "9542,9589,9640,9695"
+                        "startLines": "389,393,394,395,396,397,421",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "22397,22690,22733,22777,22822,22865,24338",
+                        "endColumns": "69,42,43,44,42,41,67",
+                        "endOffsets": "22462,22728,22772,22817,22860,22902,24401"
                     }
                 },
                 {
@@ -92,23 +111,6 @@
                         "endLines": "200,201,202,203,204,205,206,207,208,209,210,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,437,438,443,446,447,450,451,452,486,487,489,502,503,504,505,506,524,1567,1577,1829,1830,1833,1836,1839,1843,1848,1887,1892,1895,1900,1904,1908,2015,2019,2026,2030,2033,2042,2048,2051,2060,2064,2073,2106,2107,2123,2160,2164,2209,2217,2234,2296,2297,2306,2307,2321,2372,2377,2378,2380,2409,2416,2429",
                         "endColumns": "73,80,63,65,69,69,69,69,66,69,70,53,78,72,64,62,70,70,61,68,65,66,66,55,50,52,51,53,62,58,61,58,59,62,74,71,70,55,70,56,56,65,63,70,56,52,62,51,57,46,44,47,65,61,62,56,56,144,120,86,90,300,165,154,101,12,12,12,12,91,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,160,165,94,198,138,99,98,163,35,212,205,136,201,462,128,132,174,141,505,35",
                         "endOffsets": "9769,9850,9914,9980,10050,10120,10190,10260,10327,10397,10468,19117,19196,19269,19334,19397,19468,19539,19601,19670,19736,19803,19870,19926,19977,20030,20082,20136,20199,20258,20320,20379,20439,20502,20577,20649,20720,20776,20847,20904,20961,21027,21091,21162,21219,21272,21335,21387,21445,25182,25227,25457,25649,25711,25891,25948,26005,28512,28633,28803,29313,29614,29780,29935,30037,31285,97561,98152,117460,117552,117731,117899,118074,118327,118618,121416,121774,121941,122311,122471,122625,131186,131427,131862,132069,132228,132793,133154,133283,133950,134130,134839,138472,138638,139145,147967,148272,151214,151576,158083,160284,160497,161470,161607,162643,167012,168261,168394,169350,171040,172020,173650"
-                    }
-                },
-                {
-                    "source": "/Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/res/values/template-dimens.xml",
-                    "from": {
-                        "startLines": "28,24,23,22,21,20,29",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "959,880,836,791,748,706,1029",
-                        "endColumns": "69,42,43,44,42,41,67",
-                        "endOffsets": "1024,918,875,831,786,743,1092"
-                    },
-                    "to": {
-                        "startLines": "389,393,394,395,396,397,421",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "22397,22690,22733,22777,22822,22865,24338",
-                        "endColumns": "69,42,43,44,42,41,67",
-                        "endOffsets": "22462,22728,22772,22817,22860,22902,24401"
                     }
                 },
                 {
@@ -148,22 +150,20 @@
                     }
                 },
                 {
-                    "source": "/Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/res/values/strings.xml",
+                    "source": "/Users/apple/Documents/finalProject/ATD_V_1/app/src/main/res/values/styles.xml",
                     "from": {
-                        "startLines": "43,57,29,19,17,24,16,18,23,25,22,21,20",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1613,2139,1226,823,689,1121,645,739,1051,1171,1006,955,906",
-                        "endLines": "55,69,41,19,17,24,16,18,23,25,22,21,20",
-                        "endColumns": "12,19,19,82,49,49,43,83,69,51,44,50,48",
-                        "endOffsets": "2133,2727,1607,901,734,1166,684,818,1116,1218,1046,1001,950"
+                        "startLines": "16",
+                        "startColumns": "4",
+                        "startOffsets": "645",
+                        "endColumns": "95",
+                        "endOffsets": "736"
                     },
                     "to": {
-                        "startLines": "2,15,28,488,490,501,507,508,510,512,513,514,515",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "100,625,1218,28638,28808,29177,30042,30086,30223,30364,30416,30461,30512",
-                        "endLines": "14,27,40,488,490,501,507,508,510,512,513,514,515",
-                        "endColumns": "12,19,19,82,49,49,43,83,69,51,44,50,48",
-                        "endOffsets": "620,1213,1599,28716,28853,29222,30081,30165,30288,30411,30456,30507,30556"
+                        "startLines": "1586",
+                        "startColumns": "4",
+                        "startOffsets": "98475",
+                        "endColumns": "94",
+                        "endOffsets": "98565"
                     }
                 },
                 {
@@ -186,20 +186,20 @@
                     }
                 },
                 {
-                    "source": "/Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/res/values/dimens.xml",
+                    "source": "/Users/apple/Documents/finalProject/ATD_V_1/app/src/main/res/values/colors.xml",
                     "from": {
-                        "startLines": "17,18",
-                        "startColumns": "4,4",
-                        "startOffsets": "671,729",
-                        "endColumns": "57,55",
-                        "endOffsets": "724,780"
+                        "startLines": "20,18,19,17",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "799,701,748,646",
+                        "endColumns": "45,46,50,54",
+                        "endOffsets": "840,743,794,696"
                     },
                     "to": {
-                        "startLines": "329,330",
-                        "startColumns": "4,4",
-                        "startOffsets": "18443,18501",
-                        "endColumns": "57,55",
-                        "endOffsets": "18496,18552"
+                        "startLines": "196,197,198,199",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "9501,9547,9594,9645",
+                        "endColumns": "45,46,50,54",
+                        "endOffsets": "9542,9589,9640,9695"
                     }
                 },
                 {
@@ -220,24 +220,24 @@
                     }
                 },
                 {
-                    "source": "/Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/res/values/styles.xml",
+                    "source": "/Users/apple/Documents/finalProject/ATD_V_1/app/src/main/res/values/dimens.xml",
                     "from": {
-                        "startLines": "16",
-                        "startColumns": "4",
-                        "startOffsets": "645",
-                        "endColumns": "95",
-                        "endOffsets": "736"
+                        "startLines": "17,18",
+                        "startColumns": "4,4",
+                        "startOffsets": "671,729",
+                        "endColumns": "57,55",
+                        "endOffsets": "724,780"
                     },
                     "to": {
-                        "startLines": "1586",
-                        "startColumns": "4",
-                        "startOffsets": "98475",
-                        "endColumns": "94",
-                        "endOffsets": "98565"
+                        "startLines": "329,330",
+                        "startColumns": "4,4",
+                        "startOffsets": "18443,18501",
+                        "endColumns": "57,55",
+                        "endOffsets": "18496,18552"
                     }
                 },
                 {
-                    "source": "/Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/res/values/base-strings.xml",
+                    "source": "/Users/apple/Documents/finalProject/ATD_V_1/app/src/main/res/values/base-strings.xml",
                     "from": {
                         "startLines": "18,19",
                         "startColumns": "4,4",
@@ -256,7 +256,7 @@
                     }
                 },
                 {
-                    "source": "/Users/apple/Documents/finalProject/tensorflow-for-poets-2/android/tflite/app/src/main/res/values/template-styles.xml",
+                    "source": "/Users/apple/Documents/finalProject/ATD_V_1/app/src/main/res/values/template-styles.xml",
                     "from": {
                         "startLines": "24,20,22,27,29,34",
                         "startColumns": "4,4,4,4,4,4",
