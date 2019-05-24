@@ -19,4 +19,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="background_color">#000000</color>
+    <color name="textPrimary">#000000</color>
+
+
+    <color name="textSecondary">#444444</color>
+
+    <color name="activityBackground">#c0c0c0</color>
+
+    <color name="actionBarDivider">#FFFFFF</color>
 </resources>

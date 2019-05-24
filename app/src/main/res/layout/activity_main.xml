@@ -1,55 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  Copyright 2018 Google Inc.
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-  -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:id="@+id/relat"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.android.tflitecamerademo.MainActivity">
+    tools:context="com.example.android.tflitecamerademo.Main">
 
-    <Button
-        android:id="@+id/start"
-        android:layout_width="165dp"
-        android:layout_height="wrap_content"
-        android:onClick="launchSecondActivity"
-
-        android:text="Start" />
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="122dp"
-        android:layout_height="wrap_content"
-        android:onClick="launchGrpcActivity"
-        android:layout_toRightOf="@id/start"
-        android:text="Button" />
-
-
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <com.example.android.tflitecamerademo.EmptyRecyclerView
+        android:id="@+id/my_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/start"
-
         android:scrollbars="vertical" />
 
+    <LinearLayout
+        android:id="@+id/todo_list_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp"
+            android:text="@string/no_todos"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/textPrimary"
+            android:textSize="20dp"
+            android:text="@string/placeHolder"/>
+
+        <ImageView
+            android:layout_width="500dp"
+            android:layout_height="316dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            app:srcCompat="@drawable/img_baseball" />
 
 
-</RelativeLayout>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+        android:id="@+id/add_fab_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_black_24dp">
+
+
+
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--See the License for the specific language governing permissions and-->
+  <!--limitations under the License.-->
+  <!--&ndash;&gt;-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:id="@+id/relat"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+    <!--tools:context="com.example.android.tflitecamerademo.Main">-->
+
+    <!--<Button-->
+        <!--android:id="@+id/start"-->
+        <!--android:layout_width="165dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:onClick="launchSecondActivity"-->
+
+        <!--android:text="@string/start" />-->
+    <!--<Button-->
+        <!--android:id="@+id/button2"-->
+        <!--android:layout_width="122dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:onClick="launchGrpcActivity"-->
+        <!--android:layout_toEndOf="@id/start"-->
+        <!--android:text="@string/button" />-->
+
+
+
+    <!--<com.example.android.tflitecamerademo.EmptyRecyclerView-->
+        <!--android:id="@+id/my_recycler_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:scrollbars="vertical" />-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/todo_list_empty_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--android:textAlignment="center">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="16dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:textColor="@color/colorPrimary"-->
+            <!--android:textSize="40dp"-->
+            <!--android:text="@string/no_todos"/>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="16dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:textColor="@color/textPrimary"-->
+            <!--android:textSize="20sp"-->
+            <!--android:text="@string/placeHolder"/>-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="500dp"-->
+            <!--android:layout_height="316dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:gravity="center_vertical"-->
+            <!--app:srcCompat="@drawable/img_baseball" />-->
+
+
+
+    <!--</LinearLayout>-->
+
+
+
+    <!--&lt;!&ndash;<android.support.design.widget.FloatingActionButton&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/add_fab_btn"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_gravity="end|bottom"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:src="@drawable/ic_add_black_24dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:visibility="visible">&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;android:useCompatPadding="false">&ndash;&gt;&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;</android.support.design.widget.FloatingActionButton>&ndash;&gt;-->
+
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/recyclerView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/start"-->
+
+        <!--android:layout_marginTop="85dp"-->
+        <!--android:scrollbars="vertical" />-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/add_fab_btn"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--android:src="@drawable/ic_add_black_24dp">-->
+
+
+
+
+    <!--</android.support.design.widget.FloatingActionButton>-->
+
+
+
+
+
+
+<!--</RelativeLayout>-->

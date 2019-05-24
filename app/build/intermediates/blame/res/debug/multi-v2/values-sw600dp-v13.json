@@ -4,7 +4,7 @@
             "outputFile": "/Users/apple/Documents/finalProject/ATD_V_1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/apple/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/76b4beabcce1ac04bba0424ff6457ecd/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/Users/apple/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/1adc7d5fa970b821068b42348ead67e0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,22 +14,22 @@
                     }
                 },
                 {
-                    "source": "/Users/apple/.gradle/caches/transforms-1/files-1.1/design-25.2.0.aar/5d75cc943ce09cd9a793426bf2cc11a8/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/Users/apple/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/6a84e82032b85ee88aaeca918ac30b52/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11",
+                        "startLines": "2,3,4,5,6,7,8,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,115,185,256,328,386,444,550,614,677",
-                        "endLines": "2,3,4,5,6,7,8,9,10,14",
-                        "endColumns": "59,69,70,71,57,57,105,63,62,12",
-                        "endOffsets": "110,180,251,323,381,439,545,609,672,854"
+                        "startOffsets": "55,115,185,256,328,386,444,553,617,680",
+                        "endLines": "2,3,4,5,6,7,9,10,11,15",
+                        "endColumns": "59,69,70,71,57,57,10,63,62,10",
+                        "endOffsets": "110,180,251,323,381,439,548,612,675,847"
                     },
                     "to": {
-                        "startLines": "10,11,12,13,14,15,16,17,20,21",
+                        "startLines": "10,11,12,13,14,15,16,18,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "611,671,741,812,884,942,1000,1106,1306,1369",
-                        "endLines": "10,11,12,13,14,15,16,17,20,24",
-                        "endColumns": "59,69,70,71,57,57,105,63,62,12",
-                        "endOffsets": "666,736,807,879,937,995,1101,1165,1364,1546"
+                        "startOffsets": "611,671,741,812,884,942,1000,1109,1309,1372",
+                        "endLines": "10,11,12,13,14,15,17,18,21,25",
+                        "endColumns": "59,69,70,71,57,57,10,63,62,10",
+                        "endOffsets": "666,736,807,879,937,995,1104,1168,1367,1539"
                     }
                 },
                 {
@@ -42,11 +42,11 @@
                         "endOffsets": "719,787"
                     },
                     "to": {
-                        "startLines": "18,19",
+                        "startLines": "19,20",
                         "startColumns": "4,4",
-                        "startOffsets": "1170,1238",
+                        "startOffsets": "1173,1241",
                         "endColumns": "67,67",
-                        "endOffsets": "1233,1301"
+                        "endOffsets": "1236,1304"
                     }
                 },
                 {
@@ -60,12 +60,12 @@
                         "endOffsets": "861"
                     },
                     "to": {
-                        "startLines": "25",
+                        "startLines": "26",
                         "startColumns": "4",
-                        "startOffsets": "1551",
-                        "endLines": "29",
+                        "startOffsets": "1544",
+                        "endLines": "30",
                         "endColumns": "12",
-                        "endOffsets": "1791"
+                        "endOffsets": "1784"
                     }
                 }
             ]

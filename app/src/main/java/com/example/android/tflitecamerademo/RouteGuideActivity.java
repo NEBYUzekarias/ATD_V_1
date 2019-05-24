@@ -24,7 +24,7 @@ import android.content.Context;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
@@ -90,6 +90,9 @@ public class RouteGuideActivity extends Activity {
         startRouteGuideButton.setEnabled(false);
         enableButtons();
     }
+
+
+
 
     public void exitRouteGuide(View view) {
         channel.shutdown();

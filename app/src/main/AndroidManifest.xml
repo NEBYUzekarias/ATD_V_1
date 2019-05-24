@@ -30,7 +30,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.example.android.tflitecamerademo.MainActivity">
+        <activity android:name="com.example.android.tflitecamerademo.Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,15 +40,30 @@
 
         <activity android:name=".CameraActivity"
                   android:label="ATD"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".Main">
 
 
         </activity>
         <activity android:name=".RouteGuideActivity"
             android:label="ATD"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".Main">
 
         </activity>
+
+        <activity android:name=".TakeImage"
+            android:label="ATD"
+            android:parentActivityName=".Main">
+
+        </activity>
+
+        <activity
+            android:name=".InfoActivity"
+            android:label="@string/title_activity_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

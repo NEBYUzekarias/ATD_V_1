@@ -15,6 +15,7 @@ limitations under the License.
 
 package com.example.android.tflitecamerademo;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -44,9 +45,7 @@ import android.media.ImageReader;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.support.annotation.NonNull;
-import android.support.v13.app.FragmentCompat;
-import android.support.v4.content.ContextCompat;
+
 import android.util.Log;
 import android.util.Size;
 import android.view.LayoutInflater;
@@ -56,6 +55,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -65,9 +65,12 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
+import androidx.annotation.NonNull;
+import androidx.legacy.app.FragmentCompat;
+
 /** Basic fragments for the Camera. */
 public class Camera2BasicFragment extends Fragment
-    implements FragmentCompat.OnRequestPermissionsResultCallback {
+        implements FragmentCompat.OnRequestPermissionsResultCallback {
 
   /** Tag for the {@link Log}. */
   private static final String TAG = "TfLiteCameraDemo";
@@ -95,26 +98,27 @@ public class Camera2BasicFragment extends Fragment
    * TextureView}.
    */
   private final TextureView.SurfaceTextureListener surfaceTextureListener =
-      new TextureView.SurfaceTextureListener() {
+          new TextureView.SurfaceTextureListener() {
 
-        @Override
-        public void onSurfaceTextureAvailable(SurfaceTexture texture, int width, int height) {
-          openCamera(width, height);
-        }
+            @Override
+            public void onSurfaceTextureAvailable(SurfaceTexture texture, int width, int height) {
+              openCamera(width, height);
+            }
 
-        @Override
-        public void onSurfaceTextureSizeChanged(SurfaceTexture texture, int width, int height) {
-          configureTransform(width, height);
-        }
+            @Override
+            public void onSurfaceTextureSizeChanged(SurfaceTexture texture, int width, int height) {
+              configureTransform(width, height);
+            }
 
-        @Override
-        public boolean onSurfaceTextureDestroyed(SurfaceTexture texture) {
-          return true;
-        }
+            @Override
+            public boolean onSurfaceTextureDestroyed(SurfaceTexture texture) {
+              return true;
+            }
 
-        @Override
-        public void onSurfaceTextureUpdated(SurfaceTexture texture) {}
-      };
+            @Override
+            public void onSurfaceTextureUpdated(SurfaceTexture texture) {
+            }
+          };
 
   /** ID of the current {@link CameraDevice}. */
   private String cameraId;
@@ -133,34 +137,34 @@ public class Camera2BasicFragment extends Fragment
 
   /** {@link CameraDevice.StateCallback} is called when {@link CameraDevice} changes its state. */
   private final CameraDevice.StateCallback stateCallback =
-      new CameraDevice.StateCallback() {
+          new CameraDevice.StateCallback() {
 
-        @Override
-        public void onOpened(@NonNull CameraDevice currentCameraDevice) {
-          // This method is called when the camera is opened.  We start camera preview here.
-          cameraOpenCloseLock.release();
-          cameraDevice = currentCameraDevice;
-          createCameraPreviewSession();
-        }
+            @Override
+            public void onOpened(@NonNull CameraDevice currentCameraDevice) {
+              // This method is called when the camera is opened.  We start camera preview here.
+              cameraOpenCloseLock.release();
+              cameraDevice = currentCameraDevice;
+              createCameraPreviewSession();
+            }
 
-        @Override
-        public void onDisconnected(@NonNull CameraDevice currentCameraDevice) {
-          cameraOpenCloseLock.release();
-          currentCameraDevice.close();
-          cameraDevice = null;
-        }
+            @Override
+            public void onDisconnected(@NonNull CameraDevice currentCameraDevice) {
+              cameraOpenCloseLock.release();
+              currentCameraDevice.close();
+              cameraDevice = null;
+            }
 
-        @Override
-        public void onError(@NonNull CameraDevice currentCameraDevice, int error) {
-          cameraOpenCloseLock.release();
-          currentCameraDevice.close();
-          cameraDevice = null;
-          Activity activity = getActivity();
-          if (null != activity) {
-            activity.finish();
-          }
-        }
-      };
+            @Override
+            public void onError(@NonNull CameraDevice currentCameraDevice, int error) {
+              cameraOpenCloseLock.release();
+              currentCameraDevice.close();
+              cameraDevice = null;
+              Activity activity = getActivity();
+              if (null != activity) {
+                activity.finish();
+              }
+            }
+          };
 
   /** An additional thread for running tasks that shouldn't block the UI. */
   private HandlerThread backgroundThread;
@@ -182,20 +186,22 @@ public class Camera2BasicFragment extends Fragment
 
   /** A {@link CameraCaptureSession.CaptureCallback} that handles events related to capture. */
   private CameraCaptureSession.CaptureCallback captureCallback =
-      new CameraCaptureSession.CaptureCallback() {
+          new CameraCaptureSession.CaptureCallback() {
 
-        @Override
-        public void onCaptureProgressed(
-            @NonNull CameraCaptureSession session,
-            @NonNull CaptureRequest request,
-            @NonNull CaptureResult partialResult) {}
+            @Override
+            public void onCaptureProgressed(
+                    @NonNull CameraCaptureSession session,
+                    @NonNull CaptureRequest request,
+                    @NonNull CaptureResult partialResult) {
+            }
 
-        @Override
-        public void onCaptureCompleted(
-            @NonNull CameraCaptureSession session,
-            @NonNull CaptureRequest request,
-            @NonNull TotalCaptureResult result) {}
-      };
+            @Override
+            public void onCaptureCompleted(
+                    @NonNull CameraCaptureSession session,
+                    @NonNull CaptureRequest request,
+                    @NonNull TotalCaptureResult result) {
+            }
+          };
 
   /**
    * Shows a {@link Toast} on the UI thread for the classification results.
@@ -206,12 +212,12 @@ public class Camera2BasicFragment extends Fragment
     final Activity activity = getActivity();
     if (activity != null) {
       activity.runOnUiThread(
-          new Runnable() {
-            @Override
-            public void run() {
-              textView.setText(text);
-            }
-          });
+              new Runnable() {
+                @Override
+                public void run() {
+                  textView.setText(text);
+                }
+              });
     }
   }
 
@@ -236,12 +242,12 @@ public class Camera2BasicFragment extends Fragment
    * @return The optimal {@code Size}, or an arbitrary one if none were big enough
    */
   private static Size chooseOptimalSize(
-      Size[] choices,
-      int textureViewWidth,
-      int textureViewHeight,
-      int maxWidth,
-      int maxHeight,
-      Size aspectRatio) {
+          Size[] choices,
+          int textureViewWidth,
+          int textureViewHeight,
+          int maxWidth,
+          int maxHeight,
+          Size aspectRatio) {
 
     // Collect the supported resolutions that are at least as big as the preview Surface
     List<Size> bigEnough = new ArrayList<>();
@@ -251,8 +257,8 @@ public class Camera2BasicFragment extends Fragment
     int h = aspectRatio.getHeight();
     for (Size option : choices) {
       if (option.getWidth() <= maxWidth
-          && option.getHeight() <= maxHeight
-          && option.getHeight() == option.getWidth() * h / w) {
+              && option.getHeight() <= maxHeight
+              && option.getHeight() == option.getWidth() * h / w) {
         if (option.getWidth() >= textureViewWidth && option.getHeight() >= textureViewHeight) {
           bigEnough.add(option);
         } else {
@@ -280,7 +286,7 @@ public class Camera2BasicFragment extends Fragment
   /** Layout the preview and buttons. */
   @Override
   public View onCreateView(
-      LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+          LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     return inflater.inflate(R.layout.fragment_camera2_basic, container, false);
   }
 
@@ -350,20 +356,21 @@ public class Camera2BasicFragment extends Fragment
         if (facing != null && facing == CameraCharacteristics.LENS_FACING_FRONT) {
           continue;
         }
+        ////// here i have to search for Scaler stream configutation map
 
         StreamConfigurationMap map =
-            characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
+                characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
         if (map == null) {
           continue;
         }
 
         // // For still image captures, we use the largest available size.
         Size largest =
-            Collections.max(
-                Arrays.asList(map.getOutputSizes(ImageFormat.JPEG)), new CompareSizesByArea());
+                Collections.max(
+                        Arrays.asList(map.getOutputSizes(ImageFormat.JPEG)), new CompareSizesByArea());
         imageReader =
-            ImageReader.newInstance(
-                largest.getWidth(), largest.getHeight(), ImageFormat.JPEG, /*maxImages*/ 2);
+                ImageReader.newInstance(
+                        largest.getWidth(), largest.getHeight(), ImageFormat.JPEG, /*maxImages*/ 2);
 
         // Find out if we need to swap dimension to get the preview size relative to sensor
         // coordinate.
@@ -412,13 +419,13 @@ public class Camera2BasicFragment extends Fragment
         }
 
         previewSize =
-            chooseOptimalSize(
-                map.getOutputSizes(SurfaceTexture.class),
-                rotatedPreviewWidth,
-                rotatedPreviewHeight,
-                maxPreviewWidth,
-                maxPreviewHeight,
-                largest);
+                chooseOptimalSize(
+                        map.getOutputSizes(SurfaceTexture.class),
+                        rotatedPreviewWidth,
+                        rotatedPreviewHeight,
+                        maxPreviewWidth,
+                        maxPreviewHeight,
+                        largest);
 
         // We fit the aspect ratio of TextureView to the size of preview we picked.
         int orientation = getResources().getConfiguration().orientation;
@@ -437,7 +444,7 @@ public class Camera2BasicFragment extends Fragment
       // Currently an NPE is thrown when the Camera2API is used but not supported on the
       // device this code runs.
       ErrorDialog.newInstance(getString(R.string.camera_error))
-          .show(getChildFragmentManager(), FRAGMENT_DIALOG);
+              .show(getChildFragmentManager(), FRAGMENT_DIALOG);
     }
   }
 
@@ -445,9 +452,9 @@ public class Camera2BasicFragment extends Fragment
     Activity activity = getActivity();
     try {
       PackageInfo info =
-          activity
-              .getPackageManager()
-              .getPackageInfo(activity.getPackageName(), PackageManager.GET_PERMISSIONS);
+              activity
+                      .getPackageManager()
+                      .getPackageInfo(activity.getPackageName(), PackageManager.GET_PERMISSIONS);
       String[] ps = info.requestedPermissions;
       if (ps != null && ps.length > 0) {
         return ps;
@@ -475,6 +482,16 @@ public class Camera2BasicFragment extends Fragment
       if (!cameraOpenCloseLock.tryAcquire(2500, TimeUnit.MILLISECONDS)) {
         throw new RuntimeException("Time out waiting to lock camera opening.");
       }
+      if (checkSelfPermission(getActivity(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+        // TODO: Consider calling
+        //    Activity#requestPermissions
+        // here to request the missing permissions, and then overriding
+        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+        //                                          int[] grantResults)
+        // to handle the case where the user grants the permission. See the documentation
+        // for Activity#requestPermissions for more details.
+        return;
+      }
       manager.openCamera(cameraId, stateCallback, backgroundHandler);
     } catch (CameraAccessException e) {
       e.printStackTrace();
@@ -483,9 +500,13 @@ public class Camera2BasicFragment extends Fragment
     }
   }
 
+  private int checkSelfPermission(Activity activity, String camera) {
+    return 0;
+  }
+
   private boolean allPermissionsGranted() {
     for (String permission : getRequiredPermissions()) {
-      if (ContextCompat.checkSelfPermission(getActivity(), permission)
+      if (checkSelfPermission(getActivity(), permission)
           != PackageManager.PERMISSION_GRANTED) {
         return false;
       }
@@ -532,6 +553,9 @@ public class Camera2BasicFragment extends Fragment
     }
     backgroundHandler.post(periodicClassify);
   }
+
+
+  //this also has to be checked
 
   /** Stops the background thread and its {@link Handler}. */
   private void stopBackgroundThread() {
@@ -663,6 +687,9 @@ public class Camera2BasicFragment extends Fragment
     String textToShow = classifier.classifyFrame(bitmap);
     bitmap.recycle();
     showToast(textToShow);
+
+
+
   }
 
   /** Compares two {@code Size}s based on their areas. */
