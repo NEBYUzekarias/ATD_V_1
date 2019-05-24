@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed May 22 00:05:15 EAT 2019
+#Fri May 24 16:30:30 EAT 2019
 4.path=lib/x86_64/libtensorflowlite_jni.so
 8.set=DEX
 6.path=labels.txt

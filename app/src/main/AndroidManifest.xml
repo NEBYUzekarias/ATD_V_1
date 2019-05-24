@@ -18,7 +18,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.tflitecamerademo">
 
-    <uses-permission android:name="android.permission.CAMERA" />
+    <!--<uses-permission android:name="android.permission.CAMERA" />-->
+
+
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!--<uses-feature-->
+        <!--android:name="android.hardware.camera"-->
+        <!--android:required="true" />-->
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -52,6 +63,7 @@
 
         <activity android:name=".TakeImage"
             android:label="ATD"
+            android:theme="@style/AppTheme.NoActionBar"
             android:parentActivityName=".Main">
 
         </activity>
