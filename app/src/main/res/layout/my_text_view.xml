@@ -82,7 +82,7 @@
                 android:clickable="true"
                 android:layout_margin="5dp"
                 android:focusable="true"
-                app:srcCompat="@drawable/ic_file_upload" />
+                app:srcCompat="@drawable/ic_settings_system_daydream_black_24dp" />
 
             <ImageView
                 android:id="@+id/delete"

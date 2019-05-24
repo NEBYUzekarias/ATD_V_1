@@ -128,31 +128,10 @@ public class Main extends AppCompatActivity implements View.OnClickListener ,Del
 
         RecyclerViewClickListener listener = (view, image , id) -> {
             if ( id == R.id.upload){
+                Log.d(LOG_TAG, "Button RouteGuideActivity !");
 
-                if (isOnline()) {
-                    Uri uri;
-                    if (image.imagePath.startsWith("file:///")) {
-                        File file = new File(image.imagePath.substring(8));
-                        uri = Uri.fromFile(file);
-                    } else {
-                        uri = Uri.parse(image.imagePath);
-                    }
-
-                    uploadFromUri(uri, image);
-
-                }
-                else {
-
-                    Log.d("internat", "internat: no internat connection");
-
-
-                    Toast toast =  makeText(getApplicationContext(),"no internate" , Toast.LENGTH_SHORT);
-
-                    toast.setGravity(Gravity.CENTER|Gravity.CENTER, 0, 0);
-
-                    toast.show();
-
-                }
+               Intent intent = new Intent(this, RouteGuideActivity.class);
+                startActivity(intent);
             }
 
             else {

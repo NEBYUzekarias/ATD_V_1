@@ -1077,9 +1077,12 @@ drawable firebase_lockup_400
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_action_info
+drawable ic_add_a_photo_black_24dp
 drawable ic_add_black_24dp
 drawable ic_arrow_back_black_24dp
+drawable ic_camera_black_24dp
 drawable ic_check_white_24
+drawable ic_collections_black_24dp
 drawable ic_delete
 drawable ic_done
 drawable ic_error_white_24dp
@@ -1089,6 +1092,8 @@ drawable ic_launcher
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_settings_system_daydream_black_24dp
+drawable ic_thumb_up_black_24dp
 drawable img_badminton
 drawable img_baseball
 drawable img_basketball

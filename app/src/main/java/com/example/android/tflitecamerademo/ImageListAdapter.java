@@ -109,7 +109,7 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
         else{
             holder.delete.setVisibility(View.VISIBLE);
             holder.delete.setImageResource(R.drawable.ic_delete);
-            holder.button.setImageResource(R.drawable.ic_file_upload);
+            holder.button.setImageResource(R.drawable.ic_settings_system_daydream_black_24dp);
         }
     }
 
