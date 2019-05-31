@@ -46,7 +46,7 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
         public ViewHolder(View v  , RecyclerViewClickListener listener ) {
             super(v);
             mTextView = (TextView)v.findViewById(R.id.tv_android);
-            imageView = (ImageView)v.findViewById(R.id.img_android);
+            imageView = (ImageView)v.findViewById(R.id.img_eye);
             button =  v.findViewById(R.id.upload);
             delete = v.findViewById(R.id.delete);
             delete.setOnClickListener(v1 -> onClickListener.deleteOnClick(v1, ImageListAdapter.this.mDataset.get(getAdapterPosition())));
@@ -108,7 +108,7 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
         }
         else{
             holder.delete.setVisibility(View.VISIBLE);
-            holder.delete.setImageResource(R.drawable.ic_delete);
+            holder.delete.setImageResource(R.drawable.ic_memory_black_24dp);
             holder.button.setImageResource(R.drawable.ic_settings_system_daydream_black_24dp);
         }
     }

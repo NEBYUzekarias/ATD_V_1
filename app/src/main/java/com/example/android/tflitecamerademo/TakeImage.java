@@ -5,7 +5,9 @@ import android.Manifest;
 //import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -60,6 +62,8 @@ public class TakeImage extends AppCompatActivity implements View.OnClickListener
     private RadioButton[] mRadios;
     private List<CardView> mCards;
     private ImageView mSelectedImage;
+    private ImageView helpImage1;
+    private ImageView helpImage2;
     private Uri mSelectedUri;
 
     private ImageViewModel mDataViewModel;
@@ -74,6 +78,7 @@ public class TakeImage extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.activity_data_collector);
 
         if (savedInstanceState != null) {
+
             mData.stage = savedInstanceState.getInt(CURRENT_STAGE);
             Log.i("stage", "stage: " + mData.stage);
 
@@ -107,21 +112,16 @@ public class TakeImage extends AppCompatActivity implements View.OnClickListener
         findViewById(R.id.fab_cam).setOnClickListener(this);
 
         mSelectedImage = (ImageView) findViewById(R.id.selected_image);
-//        mStageRadios = (RadioGroup) findViewById(R.id.stage_radios);
+        helpImage1 = findViewById(R.id.im_data1);
+        helpImage2 = findViewById(R.id.im_data2);
 
-//        mRadios = new RadioButton[]{
-//                (RadioButton) findViewById(R.id.radio_1),
-//                (RadioButton) findViewById(R.id.radio_2),
-//                (RadioButton) findViewById(R.id.radio_3),
-//                (RadioButton) findViewById(R.id.radio_4),
-//                (RadioButton) findViewById(R.id.radio_5),
-//        };
+        helpImage1.setImageBitmap( decodeSampledBitmapFromResource(getResources(), R.drawable.image_1, 50, 50));
 
-//        mCards = new ArrayList<>();
-//        mCards.add((CardView) findViewById(R.id.card_1));
-//        mCards.add((CardView) findViewById(R.id.card_2));
-//        mCards.add((CardView) findViewById(R.id.card_3));
-//        mCards.add((CardView) findViewById(R.id.card_4));
+        helpImage2.setImageBitmap( decodeSampledBitmapFromResource(getResources(), R.drawable.image_2, 50, 50));
+
+
+
+
 //        mCards.add((CardView) findViewById(R.id.card_5));
 
         // get view model for data source
@@ -298,78 +298,7 @@ public class TakeImage extends AppCompatActivity implements View.OnClickListener
             Log.i("result", "not ok");
         }
     }
-//
-//    public void onRadioButtonClicked(View view) {
-//        // Is the button now checked?
-//        boolean checked = ((RadioButton) view).isChecked();
-//
-//        // Check which radio button was clicked
-//        if (checked) {
-//            int radio_id = view.getId();
-//            switch (radio_id) {
-//                case R.id.radio_1:
-//                    mData.stage = 1;
-//                    break;
-//                case R.id.radio_2:
-//                    mData.stage = 2;
-//                    break;
-//                case R.id.radio_3:
-//                    mData.stage = 3;
-//                    break;
-//                case R.id.radio_4:
-//                    mData.stage = 4;
-//                    break;
-//                case R.id.radio_5:
-//                    mData.stage = 5;
-//                    break;
-//            }
-//
-//            // setup ui that only one radio is selected
-//            setRadio(radio_id);
-//        }
-//    }
 
-    // set all radio buttons unchecked except the selected one
-//    public void setRadio(int radio_id) {
-//        for (RadioButton radioButton : mRadios) {
-//            radioButton.setChecked(radio_id == radioButton.getId());
-//        }
-//    }
-//
-//    // set all radio buttons unchecked
-//    // except the radio button on the clicked card view
-//    public void onCardRadioButtonClicked(View view) {
-//        int card_id = view.getId();
-//        switch (card_id) {
-//            case R.id.card_1:
-//                mData.stage = 1;
-//                break;
-//            case R.id.card_2:
-//                mData.stage = 2;
-//                break;
-//            case R.id.card_3:
-//                mData.stage = 3;
-//                break;
-//            case R.id.card_4:
-//                mData.stage = 4;
-//                break;
-//            case R.id.card_5:
-//                mData.stage = 5;
-//                break;
-//        }
-//
-//        // handle ui to check only the radio selected
-//        setCardRadio((CardView) view);
-//    }
-
-//    // set all radio buttons unchecked except the selected radio
-//    public void setCardRadio(CardView cardView) {
-//        int index = mCards.indexOf(cardView);
-//
-//        for (int i = 0; i < mRadios.length; i++) {
-//            mRadios[i].setChecked(index == i);
-//        }
-//    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -435,5 +364,48 @@ public class TakeImage extends AppCompatActivity implements View.OnClickListener
         outState.putBoolean(CURRENT_IS_CAPTURED_MODE, isCaptureMode);
     }
 
+
+
+
+    public static int calculateInSampleSize(
+            BitmapFactory.Options options, int reqWidth, int reqHeight) {
+        // Raw height and width of image
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
+
+        if (height > reqHeight || width > reqWidth) {
+
+            final int halfHeight = height / 2;
+            final int halfWidth = width / 2;
+
+            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
+            // height and width larger than the requested height and width.
+            while ((halfHeight / inSampleSize) >= reqHeight
+                    && (halfWidth / inSampleSize) >= reqWidth) {
+                inSampleSize *= 2;
+            }
+        }
+
+        return inSampleSize;
+    }
+
+    public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
+                                                         int reqWidth, int reqHeight) {
+
+        // First decode with inJustDecodeBounds=true to check dimensions
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeResource(res, resId, options);
+
+        // Calculate inSampleSize
+        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
+
+        // Decode bitmap with inSampleSize set
+        options.inJustDecodeBounds = false;
+        return BitmapFactory.decodeResource(res, resId, options);
+
+
+    }
 
 }

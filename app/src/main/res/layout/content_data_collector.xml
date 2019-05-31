@@ -85,6 +85,7 @@
                         android:text="@string/stage2_description" />
 
                     <ImageView
+                        android:id="@+id/im_data1"
                         android:foregroundGravity="center_horizontal"
                         android:layout_width="300dp"
                         android:layout_height="300dp"
@@ -92,7 +93,7 @@
                         android:layout_margin="5dp"
                         android:focusable="true"
                         android:layout_below="@id/stage2_text"
-                        app:srcCompat="@drawable/stage2"
+                        app:srcCompat="@drawable/image_3"
                         tools:ignore="VectorDrawableCompat" />
 
 
@@ -132,6 +133,7 @@
                         android:text="@string/stage1_description" />
 
                     <ImageView
+                        android:id="@+id/im_data2"
                         android:layout_width="300dp"
                         android:layout_height="300dp"
                         android:layout_below="@id/stage1_text"
@@ -139,7 +141,7 @@
                         android:clickable="true"
                         android:focusable="true"
                         android:foregroundGravity="center_horizontal"
-                        app:srcCompat="@drawable/stage1"
+                        app:srcCompat="@drawable/image_2"
                         tools:ignore="VectorDrawableCompat" />
 
 

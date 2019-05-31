@@ -9,6 +9,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+import androidx.room.Update;
 
 @Dao
 public interface ImageDao {
@@ -21,8 +22,10 @@ public interface ImageDao {
     @Delete
     void  deletImage(Image  image);
 
-    @Query("UPDATE image_table SET is_upload = :is_upload where id = :id")
-    void updateUploadStatus(boolean is_upload, int id);
+    @Query("UPDATE image_table SET stage = :stage where id = :id")
+    void stage(int stage, int id);
+
+
 
 
 

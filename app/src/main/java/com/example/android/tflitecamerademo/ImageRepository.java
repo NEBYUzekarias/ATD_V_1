@@ -1,6 +1,7 @@
 package com.example.android.tflitecamerademo;
 
 import android.app.Application;
+import android.content.Context;
 import android.os.AsyncTask;
 
 import java.util.List;
@@ -13,7 +14,7 @@ public class ImageRepository {
     private LiveData<List<Image>> mAllImages;
 
 
-    ImageRepository(Application application) {
+    ImageRepository(Context application) {
         ImageRoomDatabase db = ImageRoomDatabase.getDatabase(application);
         mImageDao = db.imageDao();
         mAllImages = mImageDao.getAll();
@@ -60,6 +61,37 @@ public class ImageRepository {
         @Override
         protected Void doInBackground(Image... images) {
             mAsyncTaskDao.deletImage(images[0]);
+            return null;
+        }
+    }
+
+
+
+
+    public void stage(int stage, int data_id) {
+        new UpdateUploadStatusTask(mImageDao).execute(new UpdateParams(data_id, stage));
+    }
+
+    public static class UpdateParams {
+        int id;
+        int stage;
+
+        public UpdateParams(int id, int stage) {
+            this.id = id;
+            this.stage = stage;
+        }
+    }
+
+    private static class UpdateUploadStatusTask extends AsyncTask<UpdateParams, Void, Void> {
+        private ImageDao mAsyncTaskDao;
+
+        UpdateUploadStatusTask(ImageDao dataDao) {
+            mAsyncTaskDao = dataDao;
+        }
+
+        @Override
+        protected Void doInBackground(UpdateParams... params) {
+            mAsyncTaskDao.stage(params[0].stage, params[0].id);
             return null;
         }
     }

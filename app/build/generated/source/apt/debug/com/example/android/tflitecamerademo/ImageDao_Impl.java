@@ -28,7 +28,7 @@ public final class ImageDao_Impl implements ImageDao {
 
   private final EntityDeletionOrUpdateAdapter __deletionAdapterOfImage;
 
-  private final SharedSQLiteStatement __preparedStmtOfUpdateUploadStatus;
+  private final SharedSQLiteStatement __preparedStmtOfStage;
 
   public ImageDao_Impl(RoomDatabase __db) {
     this.__db = __db;
@@ -63,10 +63,10 @@ public final class ImageDao_Impl implements ImageDao {
         stmt.bindLong(1, value.id);
       }
     };
-    this.__preparedStmtOfUpdateUploadStatus = new SharedSQLiteStatement(__db) {
+    this.__preparedStmtOfStage = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
-        final String _query = "UPDATE image_table SET is_upload = ? where id = ?";
+        final String _query = "UPDATE image_table SET stage = ? where id = ?";
         return _query;
       }
     };
@@ -95,12 +95,10 @@ public final class ImageDao_Impl implements ImageDao {
   }
 
   @Override
-  public void updateUploadStatus(final boolean is_upload, final int id) {
-    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateUploadStatus.acquire();
+  public void stage(final int stage, final int id) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfStage.acquire();
     int _argIndex = 1;
-    final int _tmp;
-    _tmp = is_upload ? 1 : 0;
-    _stmt.bindLong(_argIndex, _tmp);
+    _stmt.bindLong(_argIndex, stage);
     _argIndex = 2;
     _stmt.bindLong(_argIndex, id);
     __db.beginTransaction();
@@ -109,7 +107,7 @@ public final class ImageDao_Impl implements ImageDao {
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();
-      __preparedStmtOfUpdateUploadStatus.release(_stmt);
+      __preparedStmtOfStage.release(_stmt);
     }
   }
 

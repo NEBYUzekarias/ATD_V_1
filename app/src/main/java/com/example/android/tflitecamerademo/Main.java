@@ -17,6 +17,7 @@ package com.example.android.tflitecamerademo;
  */
 
 
+import android.app.Activity;
 import android.app.DialogFragment;
 import android.app.ProgressDialog;
 //import android.arch.lifecycle.Observer;
@@ -25,6 +26,9 @@ import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.net.ConnectivityManager;
@@ -37,6 +41,7 @@ import android.os.Bundle;
 //import android.support.v7.app.AppCompatActivity;
 ////import android.support.v7.widget.LinearLayoutManager;
 ////import android.support.v7.widget.RecyclerViewiew;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
@@ -47,6 +52,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 //import android.support.v4.util.Pair;
 import java.io.File;
+import java.io.IOException;
+import java.text.BreakIterator;
 import java.util.List;
 
 import androidx.annotation.Nullable;
@@ -64,7 +71,7 @@ import static android.widget.Toast.makeText;
  * Activity to upload and download photos from Firebase Storage.
  * <p>
  */
-public class Main extends AppCompatActivity implements View.OnClickListener ,DeleteDialogFragment.NoticeDialogListener {
+public class Main extends AppCompatActivity implements View.OnClickListener  {
 
 
     // Recycle view
@@ -73,6 +80,11 @@ public class Main extends AppCompatActivity implements View.OnClickListener ,Del
     private RecyclerView.LayoutManager mLayoutManager;
     public CountDrawable badge;
     private LayerDrawable icon;
+    private ImageView imageView;
+
+    private ImageClassifier classifier;
+
+
     private static final String LOG_TAG =
             Main.class.getSimpleName();
 
@@ -94,6 +106,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener ,Del
     private final int imageWidthPixels = 1024;
     private final int imageHeightPixels = 768;
     //private FirebaseAuth mAuth;
+    static final int DIM_IMG_SIZE_X = 224;
+    static final int DIM_IMG_SIZE_Y = 224;
     ImageButton floatButton;
     View upload;
     public CountDrawable countDrawable;
@@ -155,8 +169,29 @@ public class Main extends AppCompatActivity implements View.OnClickListener ,Del
             @Override
             public void deleteOnClick(View v, Image position1) {
                 position = position1;
-                showNoticeDialog();
-                mDataViewModel.deleteImage(position);
+//                showNoticeDialog();
+                try{
+                classifier = new ImageClassifier(Main.this);
+
+                } catch (IOException e) {
+                    Log.e(TAG, "Failed to initialize an image classifier.");
+                }
+
+
+
+
+                Uri uri = Uri.parse(position1.imagePath);
+                classifyFrame(uri);
+
+
+
+                ImageRepository stage = new ImageRepository(getApplicationContext());
+
+                stage.stage(3, position1.id);
+                // here is were i change teh listner
+//                position.stage = 3;
+
+
             }
         };
 
@@ -205,6 +240,9 @@ public class Main extends AppCompatActivity implements View.OnClickListener ,Del
 
         //floating button
         floatButton = (ImageButton) findViewById(R.id.add_fab_btn);
+        imageView = findViewById(R.id.mainIm);
+        imageView.setImageBitmap( decodeSampledBitmapFromResource(getResources(), R.drawable.image_1, 50, 50));
+
         floatButton.setOnClickListener(this);
 
         // Restore instance state
@@ -422,12 +460,12 @@ public class Main extends AppCompatActivity implements View.OnClickListener ,Del
         icon.mutate();
         icon.setDrawableByLayerId(R.id.ic_group_count, badge);
     }
-
-    public void showNoticeDialog() {
-        // Create an instance of the dialog fragment and show it
-        DialogFragment dialog = new DeleteDialogFragment();
-        dialog.show(getFragmentManager(),"DeleteDialogFragment");
-    }
+//
+//    public void showNoticeDialog() {
+//        // Create an instance of the dialog fragment and show it
+//        DialogFragment dialog = new DeleteDialogFragment();
+//        dialog.show(getFragmentManager(),"DeleteDialogFragment");
+//    }
 
 
     public boolean isOnline() {
@@ -441,18 +479,18 @@ public class Main extends AppCompatActivity implements View.OnClickListener ,Del
 
 
 
-    public void onDialogPositiveClick(DialogFragment dialog ) {
-        // User touched the dialog's positive button
-
-
-        mDataViewModel.deleteImage(position);
-
-    }
-
-    @Override
-    public void onDialogNegativeClick(DialogFragment dialog) {
-        // User touched the dialog's negative button
-    }
+//    public void onDialogPositiveClick(DialogFragment dialog ) {
+//        // User touched the dialog's positive button
+//
+//
+//        mDataViewModel.deleteImage(position);
+//
+//    }
+//
+//    @Override
+//    public void onDialogNegativeClick(DialogFragment dialog) {
+//        // User touched the dialog's negative button
+//    }
 
 
     public void launchGrpcActivity(View view) {
@@ -471,5 +509,84 @@ public class Main extends AppCompatActivity implements View.OnClickListener ,Del
 
         Log.d(LOG_TAG, "Button clicked!");
     }
+
+
+
+    public static int calculateInSampleSize(
+            BitmapFactory.Options options, int reqWidth, int reqHeight) {
+        // Raw height and width of image
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
+
+        if (height > reqHeight || width > reqWidth) {
+
+            final int halfHeight = height / 2;
+            final int halfWidth = width / 2;
+
+            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
+            // height and width larger than the requested height and width.
+            while ((halfHeight / inSampleSize) >= reqHeight
+                    && (halfWidth / inSampleSize) >= reqWidth) {
+                inSampleSize *= 2;
+            }
+        }
+
+        return inSampleSize;
+    }
+
+    public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
+                                                         int reqWidth, int reqHeight) {
+
+        // First decode with inJustDecodeBounds=true to check dimensions
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeResource(res, resId, options);
+
+        // Calculate inSampleSize
+        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
+
+        // Decode bitmap with inSampleSize set
+        options.inJustDecodeBounds = false;
+        return BitmapFactory.decodeResource(res, resId, options);
+
+
+    }
+
+
+    @Override
+    public void onDestroy() {
+        classifier.close();
+        super.onDestroy();
+    }
+
+
+
+
+    /** Classifies a frame from the preview stream. */
+    private void classifyFrame(Uri imageUri) {
+        if (classifier == null || Main.this ==null) {
+            return;
+        }
+        Bitmap bitmap =
+                null;
+        try {
+            bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String textToShow = classifier.classifyFrame(bitmap);
+
+        Log.d(LOG_TAG, textToShow);
+
+
+        bitmap.recycle();
+
+
+
+    }
+
+
+
 
 }
