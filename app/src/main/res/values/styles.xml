@@ -14,6 +14,7 @@
  limitations under the License.
 -->
 <resources>
+
     <style name="MaterialTheme" parent="android:Theme.Material.Light.NoActionBar.Fullscreen" />
 
 
@@ -41,12 +42,6 @@
         <item name="android:paddingRight">24dp</item>
         <item name="android:layout_gravity">center</item>
     </style>
-
-
-
-
-
-
 
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -99,9 +94,6 @@
     <!--card views for radio buttons of stage selection-->
 
 
-
-
-
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="AppTheme.Launcher">
@@ -116,8 +108,9 @@
     <style name="AppTheme.Launcher.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
-    <style name="AppThemeCustomized" parent="Theme.AppCompat.Light.DarkActionBar"> @style/colorAccent false true </style>
-
+    <style name="AppThemeCustomized" parent="Theme.AppCompat.Light.DarkActionBar">@style/colorAccent
+        false true
+    </style>
 
 
     <!--<color name="actionBarDivider">#FFFFFF</color>-->

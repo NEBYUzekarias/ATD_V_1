@@ -29,6 +29,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.net.ConnectivityManager;
@@ -80,7 +81,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
     private RecyclerView.LayoutManager mLayoutManager;
     public CountDrawable badge;
     private LayerDrawable icon;
-    private ImageView imageView;
+//    private ImageView imageView;
 
     private ImageClassifier classifier;
 
@@ -109,6 +110,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
     static final int DIM_IMG_SIZE_X = 224;
     static final int DIM_IMG_SIZE_Y = 224;
     ImageButton floatButton;
+//    ImageButton hospitalMap;
     View upload;
     public CountDrawable countDrawable;
     public Image position;
@@ -165,13 +167,41 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
             }
         };
 
-        ImageListAdapter.ButtonListener buttonListener = new ImageListAdapter.ButtonListener() {
+        ImageListAdapter.ButtonListener buttonListener = (v, position1) -> {
+            position = position1;
+//                showNoticeDialog();
+            try{
+            classifier = new ImageClassifier(Main.this);
+
+            } catch (IOException e) {
+                Log.e(TAG, "Failed to initialize an image classifier.");
+            }
+
+
+
+
+            Uri uri = Uri.parse(position1.imagePath);
+            float [] var = classifyFrame(uri);
+
+
+
+            ImageRepository stage = new ImageRepository(getApplicationContext());
+
+            stage.stage( var[0], position1.id);
+            // here is were i change teh listner
+//                position.stage = 3;
+
+
+        };
+
+
+        ImageListAdapter.Delete butn = new ImageListAdapter.Delete() {
             @Override
             public void deleteOnClick(View v, Image position1) {
                 position = position1;
 //                showNoticeDialog();
                 try{
-                classifier = new ImageClassifier(Main.this);
+                    classifier = new ImageClassifier(Main.this);
 
                 } catch (IOException e) {
                     Log.e(TAG, "Failed to initialize an image classifier.");
@@ -181,13 +211,14 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
 
 
                 Uri uri = Uri.parse(position1.imagePath);
-                classifyFrame(uri);
+                float [] var = classifyFrame(uri);
 
 
 
                 ImageRepository stage = new ImageRepository(getApplicationContext());
 
-                stage.stage(3, position1.id);
+                stage.stage( var[0], position1.id);
+                stage.delete(position);
                 // here is were i change teh listner
 //                position.stage = 3;
 
@@ -199,8 +230,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
 
 
 
-
-        mAdapter = new ImageListAdapter(listener, buttonListener);
+        mAdapter = new ImageListAdapter(listener, buttonListener , butn);
         mRecyclerView.setAdapter(mAdapter);
         countDrawable = new CountDrawable();
 
@@ -240,10 +270,12 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
 
         //floating button
         floatButton = (ImageButton) findViewById(R.id.add_fab_btn);
-        imageView = findViewById(R.id.mainIm);
-        imageView.setImageBitmap( decodeSampledBitmapFromResource(getResources(), R.drawable.image_1, 50, 50));
+//        hospitalMap = findViewById(R.id.hospitals);
+//        imageView = findViewById(R.id.mainIm);
+//        imageView.setImageBitmap( decodeSampledBitmapFromResource(getResources(), R.drawable.image_1, 50, 50));
 
         floatButton.setOnClickListener(this);
+//        hospitalMap.setOnClickListener(this);
 
         // Restore instance state
         if (savedInstanceState != null) {
@@ -372,6 +404,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
             case R.id.about:
                 startActivity(new Intent(this, AboutActivity.class));
                 break;
+            case R.id.hospital_map:
+                startActivity(new Intent(this, HospitalActivity.class));
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -387,45 +421,44 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
             Intent open_collector = new Intent(this, TakeImage.class);
             startActivity(open_collector);
         }
-        else{
+//        if(i == R.id.hospitals){
+//
+//            Intent open_collector = new Intent(this, HospitalActivity.class);
+//            startActivity(open_collector);
+//        }
 
-            startActivity(new Intent(this, RouteGuideActivity.class));
-        }
 
     }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         MenuItem menuItem = menu.findItem(R.id.upload_all);
-        menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem menuItem) {
-                List<Image> datas = mDataViewModel.getAllImage().getValue();
+        menuItem.setOnMenuItemClickListener(menuItem1 -> {
+            List<Image> datas = mDataViewModel.getAllImage().getValue();
 
-                if (datas != null) {
-                    for (Image data : datas) {
-                        if (data.isUpload) {
-                            makeText(getApplicationContext(),
-                                    "Already uploaded2", Toast.LENGTH_LONG)
-                                    .show();
+            if (datas != null) {
+                for (Image data : datas) {
+                    if (data.isUpload) {
+                        makeText(getApplicationContext(),
+                                "Already uploaded2", Toast.LENGTH_LONG)
+                                .show();
+                    } else {
+                        Uri uri;
+                        if (data.imagePath.startsWith("file:///")) {
+                            File file = new File(data.imagePath.substring(8));
+                            uri = Uri.fromFile(file);
                         } else {
-                            Uri uri;
-                            if (data.imagePath.startsWith("file:///")) {
-                                File file = new File(data.imagePath.substring(8));
-                                uri = Uri.fromFile(file);
-                            } else {
-                                uri = Uri.parse(data.imagePath);
-                            }
-
-                            uploadFromUri(uri, data);
+                            uri = Uri.parse(data.imagePath);
                         }
-                    }
-                } else {
-                    Log.d("data", "datas: null");
-                }
 
-                return true;
+                        uploadFromUri(uri, data);
+                    }
+                }
+            } else {
+                Log.d("data", "datas: null");
             }
+
+            return true;
         });
 
         icon = (LayerDrawable) menuItem.getIcon();
@@ -564,29 +597,51 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
 
 
     /** Classifies a frame from the preview stream. */
-    private void classifyFrame(Uri imageUri) {
+    private float [] classifyFrame(Uri imageUri) {
         if (classifier == null || Main.this ==null) {
-            return;
+            Log.e(TAG, "Image classifier has not been initialized; Skipped.");
+            float[] a = {0,0};
+            return a;
         }
         Bitmap bitmap =
                 null;
         try {
             bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+            bitmap = getResizedBitmap(bitmap, ImageClassifier.DIM_IMG_SIZE_X, ImageClassifier.DIM_IMG_SIZE_Y);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
-        String textToShow = classifier.classifyFrame(bitmap);
+        float [] textToShow = classifier.classifyFrame(bitmap);
 
-        Log.d(LOG_TAG, textToShow);
+        Log.d(LOG_TAG, textToShow + "neba");
 
 
         bitmap.recycle();
 
-
+        return textToShow  ;
 
     }
 
 
+
+
+    public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
+        int width = bm.getWidth();
+        int height = bm.getHeight();
+        float scaleWidth = ((float) newWidth) / width;
+        float scaleHeight = ((float) newHeight) / height;
+        // CREATE A MATRIX FOR THE MANIPULATION
+        Matrix matrix = new Matrix();
+        // RESIZE THE BIT MAP
+        matrix.postScale(scaleWidth, scaleHeight);
+
+        // "RECREATE" THE NEW BITMAP
+        Bitmap resizedBitmap = Bitmap.createBitmap(
+                bm, 0, 0, width, height, matrix, false);
+        bm.recycle();
+        return resizedBitmap;
+    }
 
 
 }

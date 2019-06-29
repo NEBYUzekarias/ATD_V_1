@@ -43,7 +43,7 @@ public class ImageClassifier {
   private static final String TAG = "TfLiteCameraDemo";
 
   /** Name of the model file stored in Assets. */
-  private static final String MODEL_PATH = "graph.lite";
+  private static final String MODEL_PATH = "model.tflite";
 
   /** Name of the label file stored in Assets. */
   private static final String LABEL_PATH = "labels.txt";
@@ -106,10 +106,11 @@ public class ImageClassifier {
   }
 
   /** Classifies a frame from the preview stream. */
-  String classifyFrame(Bitmap bitmap) {
+  float [] classifyFrame(Bitmap bitmap) {
     if (tflite == null) {
       Log.e(TAG, "Image classifier has not been initialized; Skipped.");
-      return "Uninitialized Classifier.";
+     float [] a = {0,0};
+      return a;
     }
     convertBitmapToByteBuffer(bitmap);
     // Here's where the magic happens!!!
@@ -122,8 +123,8 @@ public class ImageClassifier {
     applyFilter();
 
     // print the results
-    String textToShow = printTopKLabels();
-    textToShow = Long.toString(endTime - startTime) + "ms" + textToShow;
+    float [] textToShow = printTopKLabels();
+//     Long.toString(endTime - startTime + "ms" textToShow.toString());
     return textToShow;
   }
 
@@ -203,7 +204,7 @@ public class ImageClassifier {
   }
 
   /** Prints top-K labels, to be shown in UI as the results. */
-  private String printTopKLabels() {
+  private float [] printTopKLabels() {
     for (int i = 0; i < labelList.size(); ++i) {
       sortedLabels.add(
           new AbstractMap.SimpleEntry<>(labelList.get(i), labelProbArray[0][i]));
@@ -211,11 +212,14 @@ public class ImageClassifier {
         sortedLabels.poll();
       }
     }
-    String textToShow = "";
-    final int size = sortedLabels.size();
-    for (int i = 0; i < size; ++i) {
+    float [] textToShow ={1,1 ,1 ,1 };
+//    final int size = sortedLabels.size();
+    for (int i = 0; i < 2; ++i) {
       Map.Entry<String, Float> label = sortedLabels.poll();
-      textToShow = String.format("\n%s: %4.2f",label.getKey(),label.getValue()) + textToShow;
+      textToShow[i*2]  = Integer.parseInt(label.getKey());
+      textToShow[(i *2) +1] = label.getValue()*100;
+
+//      textToShow[0] = String.format("\n%s: %4.2f",label.getKey(),label.getValue()) + textToShow;
     }
     return textToShow;
   }

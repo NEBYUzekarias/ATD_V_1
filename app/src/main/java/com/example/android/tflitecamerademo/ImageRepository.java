@@ -68,15 +68,15 @@ public class ImageRepository {
 
 
 
-    public void stage(int stage, int data_id) {
+    public void stage(float stage, int data_id) {
         new UpdateUploadStatusTask(mImageDao).execute(new UpdateParams(data_id, stage));
     }
 
     public static class UpdateParams {
         int id;
-        int stage;
+        float stage;
 
-        public UpdateParams(int id, int stage) {
+        public UpdateParams(int id, float stage) {
             this.id = id;
             this.stage = stage;
         }

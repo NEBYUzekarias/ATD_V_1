@@ -684,9 +684,9 @@ public class Camera2BasicFragment extends Fragment
     }
     Bitmap bitmap =
         textureView.getBitmap(ImageClassifier.DIM_IMG_SIZE_X, ImageClassifier.DIM_IMG_SIZE_Y);
-    String textToShow = classifier.classifyFrame(bitmap);
+    float [] textToShow = classifier.classifyFrame(bitmap);
     bitmap.recycle();
-    showToast(textToShow);
+    showToast(String.valueOf(textToShow));
 
 
 

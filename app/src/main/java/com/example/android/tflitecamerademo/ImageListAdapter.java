@@ -30,7 +30,7 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
 
     private RecyclerViewClickListener mListener;
     public ButtonListener onClickListener;
-
+    public Delete onClickDelete;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -41,6 +41,7 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
         public TextView mTextView;
         public ImageView button ;
         private ImageView delete;
+        private ImageView pros;
         private RecyclerViewClickListener mListener;
 
         public ViewHolder(View v  , RecyclerViewClickListener listener ) {
@@ -49,7 +50,10 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
             imageView = (ImageView)v.findViewById(R.id.img_eye);
             button =  v.findViewById(R.id.upload);
             delete = v.findViewById(R.id.delete);
+            pros = v.findViewById(R.id.prose);
             delete.setOnClickListener(v1 -> onClickListener.deleteOnClick(v1, ImageListAdapter.this.mDataset.get(getAdapterPosition())));
+            pros.setOnClickListener(v1 -> onClickDelete.deleteOnClick(v1, ImageListAdapter.this.mDataset.get(getAdapterPosition())));
+
             button.setOnClickListener(this);
             imageView.setOnClickListener(this::onClick);
             mListener = listener;
@@ -64,9 +68,11 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ImageListAdapter(RecyclerViewClickListener listener , ButtonListener buttonListener ) {
+    public ImageListAdapter(RecyclerViewClickListener listener , ButtonListener buttonListener , Delete btn) {
         this.mListener = (RecyclerViewClickListener) listener;
         this.onClickListener = (ButtonListener) buttonListener;
+        this.onClickDelete = btn;
+
     }
 
 
@@ -92,10 +98,13 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         Image selectedData = mDataset.get(position);
-        holder.mTextView.setText("stage" + selectedData.stage);
+        if (selectedData.stage == -1){
+            holder.mTextView.setText(" ");
+        }else {
+        holder.mTextView.setText("stage " + selectedData.stage);}
         Uri uri = Uri.parse(selectedData.imagePath);
         Context context = holder.imageView.getContext();
-        Picasso.with(context).load(uri).fit().into(holder.imageView);
+        Picasso.get().load(uri).fit().into(holder.imageView);
         // holder.imageView.setImageURI(uri);
         if (selectedData.isUpload) {
             holder.button.setOnClickListener(view -> Toast.makeText(view.getContext(), "Already uploaded", Toast.LENGTH_SHORT)
@@ -110,12 +119,18 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
             holder.delete.setVisibility(View.VISIBLE);
             holder.delete.setImageResource(R.drawable.ic_memory_black_24dp);
             holder.button.setImageResource(R.drawable.ic_settings_system_daydream_black_24dp);
+            holder.pros.setImageResource(R.drawable.ic_delete);
         }
     }
 
 
 
     public interface ButtonListener {
+
+        void deleteOnClick(View v, Image position);
+
+    }
+    public interface Delete {
 
         void deleteOnClick(View v, Image position);
 

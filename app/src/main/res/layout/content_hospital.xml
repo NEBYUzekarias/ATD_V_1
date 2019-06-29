@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".HospitalActivity"
+    android:layout_marginTop="3dp"
+        tools:showIn="@layout/activity_hospital"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/cardView">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <TextView
+                        android:id="@+id/stage2_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/text_margin"
+                        android:layout_alignParentTop="true"
+                        android:text="Menelik II Hospital"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/stage2_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/text_margin"
+                        android:layout_marginLeft="@dimen/text_margin"
+                        android:layout_marginRight="@dimen/text_margin"
+                        android:layout_below="@+id/stage2_title"
+                        android:text="@string/stage2_description" />
+
+                    <ImageView
+                        android:id="@+id/im_menelik"
+                        android:foregroundGravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:clickable="true"
+                        android:layout_margin="5dp"
+                        android:focusable="true"
+                        android:layout_below="@id/stage2_text"
+                        app:srcCompat="@drawable/menelik"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageView
+                        android:id="@+id/prose"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:layout_below="@id/im_menelik"
+                        android:layout_alignRight="@id/stage2_text"
+                        android:onClick="menelik"
+                        android:clickable="true"
+                        app:srcCompat="@drawable/ic_add_location_black_24dp"
+                        android:color="?attr/colorPrimary"
+                        android:focusable="true" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/cardView">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <TextView
+                        android:id="@+id/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/text_margin"
+                        android:layout_alignParentTop="true"
+                        android:text="ጥቁር አንበሳ ሆስፒታል"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/blacktex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/text_margin"
+                        android:layout_marginLeft="@dimen/text_margin"
+                        android:layout_marginRight="@dimen/text_margin"
+                        android:layout_below="@+id/black"
+                        android:text="@string/stage2_description" />
+
+                    <ImageView
+                        android:id="@+id/im_black"
+                        android:foregroundGravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:clickable="true"
+                        android:layout_margin="5dp"
+                        android:focusable="true"
+                        android:layout_below="@id/blacktex"
+                        app:srcCompat="@drawable/blacklion"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageView
+                        android:id="@+id/hospital_map"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:layout_below="@id/im_black"
+                        android:layout_alignRight="@id/blacktex"
+                        android:onClick="getFeature"
+
+                        android:clickable="true"
+                        app:srcCompat="@drawable/ic_add_location_black_24dp"
+                        android:color="?attr/colorPrimary"
+                        android:focusable="true" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/cardView">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <TextView
+                        android:id="@+id/Shashe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/text_margin"
+                        android:layout_alignParentTop="true"
+                        android:text="Shashemene  ሆስፒታል"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/Shashetxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/text_margin"
+                        android:layout_marginLeft="@dimen/text_margin"
+                        android:layout_marginRight="@dimen/text_margin"
+                        android:layout_below="@+id/Shashe"
+                        android:text="@string/stage2_description" />
+
+                    <ImageView
+                        android:id="@+id/im_shash"
+                        android:foregroundGravity="center_horizontal"
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:clickable="true"
+                        android:layout_margin="5dp"
+                        android:focusable="true"
+                        android:layout_below="@id/Shashetxt"
+                        app:srcCompat="@drawable/blacklion"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageView
+                        android:id="@+id/Shashe_map"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:layout_below="@id/im_shash"
+                        android:layout_alignRight="@id/Shashetxt"
+                        android:onClick="getFeature"
+
+                        android:clickable="true"
+                        app:srcCompat="@drawable/ic_add_location_black_24dp"
+                        android:color="?attr/colorPrimary"
+                        android:focusable="true" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/cardView">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            <TextView
+                android:id="@+id/hawasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:layout_alignParentTop="true"
+                android:text="Shashemene  ሆስፒታል"
+                android:textAllCaps="true"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+            </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/cardView">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <TextView
+                        android:id="@+id/mekele"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/text_margin"
+                        android:layout_alignParentTop="true"
+                        android:text="Shashemene  ሆስፒታል"
+                        android:textAllCaps="true"
+                        android:textSize="30sp"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>

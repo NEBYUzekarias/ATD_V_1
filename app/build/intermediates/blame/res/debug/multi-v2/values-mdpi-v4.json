@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/apple/Documents/finalProject/ATD_V_1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mdpi-v4/values-mdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/4e6d6929191c5132c2ecc1a170e61a8a/res/values-mdpi-v4/values-mdpi-v4.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,109",
+                        "endColumns": "53,47",
+                        "endOffsets": "104,152"
+                    }
+                }
+            ]
+        }
+    ]
+}

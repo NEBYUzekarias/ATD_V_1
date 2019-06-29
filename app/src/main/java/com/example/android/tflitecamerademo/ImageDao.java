@@ -9,7 +9,6 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
-import androidx.room.Update;
 
 @Dao
 public interface ImageDao {
@@ -23,7 +22,7 @@ public interface ImageDao {
     void  deletImage(Image  image);
 
     @Query("UPDATE image_table SET stage = :stage where id = :id")
-    void stage(int stage, int id);
+    void stage(float stage, int id);
 
 
 

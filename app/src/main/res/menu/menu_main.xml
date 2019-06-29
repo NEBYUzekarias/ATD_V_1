@@ -13,6 +13,10 @@
         android:title="@string/info"
         app:showAsAction="never" />
 
+    <item android:id="@+id/hospital_map"
+        android:title="Hospital Map"
+        app:showAsAction="never" />
+
     <item android:id="@+id/about"
         android:title="@string/about"
         app:showAsAction="never" />

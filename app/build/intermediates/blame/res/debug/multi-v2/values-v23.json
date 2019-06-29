@@ -4,7 +4,7 @@
             "outputFile": "/Users/apple/Documents/finalProject/ATD_V_1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/apple/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/1adc7d5fa970b821068b42348ead67e0/res/values-v23/values-v23.xml",
+                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/07af8723dc2b4cbf5fa3d99451bc848b/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "/Users/apple/.gradle/caches/transforms-1/files-1.1/cardview-1.0.0-beta01.aar/bd043bdfbdfcdd221f7347385d5dcedb/res/values-v23/values-v23.xml",
+                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/d20adb696a1344168492de2297ce93b6/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

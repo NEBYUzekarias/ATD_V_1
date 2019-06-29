@@ -95,10 +95,10 @@ public final class ImageDao_Impl implements ImageDao {
   }
 
   @Override
-  public void stage(final int stage, final int id) {
+  public void stage(final float stage, final int id) {
     final SupportSQLiteStatement _stmt = __preparedStmtOfStage.acquire();
     int _argIndex = 1;
-    _stmt.bindLong(_argIndex, stage);
+    _stmt.bindDouble(_argIndex, stage);
     _argIndex = 2;
     _stmt.bindLong(_argIndex, id);
     __db.beginTransaction();

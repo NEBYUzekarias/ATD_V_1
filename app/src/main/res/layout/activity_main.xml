@@ -3,132 +3,147 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_gravity="center"
     android:layout_height="match_parent"
     tools:context="com.example.android.tflitecamerademo.Main">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
 
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-
-        android:layout_gravity="center"
-
-
-        style="@style/cardView">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/stage1_title"
+                android:id="@+id/add_fab_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_margin"
-                android:layout_alignParentTop="true"
-                android:text="some info"
-                android:textAllCaps="true"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/stage1_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="@dimen/text_margin"
-                android:layout_marginLeft="@dimen/text_margin"
-                android:layout_marginRight="@dimen/text_margin"
-                android:layout_below="@+id/stage1_title"
-                android:text="@string/stage1_description" />
-
-            <ImageView
-                android:id="@+id/mainIm"
-                android:foregroundGravity="center_horizontal"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:clickable="true"
-                android:layout_margin="5dp"
-                android:focusable="true"
-                android:layout_below="@id/stage1_text"
-                app:srcCompat="@drawable/image_1"
-                tools:ignore="VectorDrawableCompat" />
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@drawable/ic_done"
+                app:layout_anchor="@id/top_container"
+                app:layout_anchorGravity="bottom|right|end"/>
+            <LinearLayout
+                android:id="@+id/top_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
 
 
-        </RelativeLayout>
+                <!--<androidx.cardview.widget.CardView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="300dp"-->
+
+                <!--android:layout_gravity="center"-->
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <!--style="@style/cardView">-->
 
-            android:id="@+id/add_fab_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:src="@drawable/ic_camera_black_24dp">
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/stage1_title"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="@dimen/text_margin"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:text="some info"-->
+                <!--android:textAllCaps="true"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textStyle="bold"/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/stage1_text"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="@dimen/text_margin"-->
+                <!--android:layout_marginLeft="@dimen/text_margin"-->
+                <!--android:layout_marginRight="@dimen/text_margin"-->
+                <!--android:layout_below="@+id/stage1_title"-->
+                <!--android:text="@string/stage1_description" />-->
 
 
+                <!--<ImageView-->
+                <!--android:id="@+id/mainIm"-->
+                <!--android:foregroundGravity="center_horizontal"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_height="200dp"-->
+                <!--android:clickable="true"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:focusable="true"-->
+                <!--android:layout_below="@id/stage1_text"-->
+                <!--app:srcCompat="@drawable/image_1"-->
+                <!--tools:ignore="VectorDrawableCompat" />-->
 
 
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
-    </androidx.cardview.widget.CardView>
+                <!--</RelativeLayout>-->
+                <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
 
-
-
-
-    <com.example.android.tflitecamerademo.EmptyRecyclerView
-        android:id="@+id/my_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical" />
-
-    <LinearLayout
-        android:id="@+id/todo_list_empty_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:textAlignment="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/colorPrimary"
-            android:textSize="40dp"
-            android:text="@string/no_todos"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/textPrimary"
-            android:textSize="20dp"
-            android:text="@string/placeHolder"/>
-
-        <ImageView
-            android:layout_width="500dp"
-            android:layout_height="316dp"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_vertical"
-            app:srcCompat="@drawable/img_baseball" />
+                <!--android:id="@+id/hospitals"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="bottom|start"-->
+                <!--android:layout_margin="@dimen/fab_margin"-->
+                <!--android:outlineAmbientShadowColor="@color/design_default_color_primary_dark"-->
+                <!--app:rippleColor="@color/cardview_light_background"-->
+                <!--android:src="@drawable/ic_add_location_black_24dp">-->
 
 
 
-    </LinearLayout>
+
+                <!--</com.google.android.material.floatingactionbutton.FloatingActionButton>-->
 
 
 
-    </LinearLayout>
 
 
 
+
+                <!--</com.google.android.material.floatingactionbutton.FloatingActionButton>-->
+                <!--</androidx.cardview.widget.CardView>-->
+
+                <com.example.android.tflitecamerademo.EmptyRecyclerView
+                    android:id="@+id/my_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/todo_list_empty_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:textAlignment="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="16dp"
+                        android:text="@string/no_todos"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="40dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="16dp"
+                        android:text="@string/placeHolder"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:layout_width="500dp"
+                        android:layout_height="316dp"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_vertical"
+                        app:srcCompat="@drawable/img_baseball" />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
