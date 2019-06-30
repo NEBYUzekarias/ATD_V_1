@@ -174,37 +174,37 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int mapbox_compass_icon = 0x7f0800da;
-        public static final int mapbox_info_bg_selector = 0x7f0800db;
-        public static final int mapbox_info_icon_default = 0x7f0800dc;
-        public static final int mapbox_info_icon_selected = 0x7f0800dd;
-        public static final int mapbox_logo_helmet = 0x7f0800de;
-        public static final int mapbox_logo_icon = 0x7f0800df;
-        public static final int mapbox_marker_icon_default = 0x7f0800e0;
-        public static final int mapbox_markerview_icon_default = 0x7f0800e1;
-        public static final int mapbox_mylocation_bg_shape = 0x7f0800e2;
-        public static final int mapbox_mylocation_icon_bearing = 0x7f0800e3;
-        public static final int mapbox_mylocation_icon_default = 0x7f0800e4;
-        public static final int mapbox_popup_window_transparent = 0x7f0800e5;
-        public static final int mapbox_rounded_corner = 0x7f0800e6;
-        public static final int mapbox_user_bearing_icon = 0x7f0800e7;
-        public static final int mapbox_user_icon = 0x7f0800e8;
-        public static final int mapbox_user_icon_shadow = 0x7f0800e9;
-        public static final int mapbox_user_icon_stale = 0x7f0800ea;
-        public static final int mapbox_user_puck_icon = 0x7f0800eb;
-        public static final int mapbox_user_stroke_icon = 0x7f0800ec;
-        public static final int notification_action_background = 0x7f0800f2;
-        public static final int notification_bg = 0x7f0800f3;
-        public static final int notification_bg_low = 0x7f0800f4;
-        public static final int notification_bg_low_normal = 0x7f0800f5;
-        public static final int notification_bg_low_pressed = 0x7f0800f6;
-        public static final int notification_bg_normal = 0x7f0800f7;
-        public static final int notification_bg_normal_pressed = 0x7f0800f8;
-        public static final int notification_icon_background = 0x7f0800f9;
-        public static final int notification_template_icon_bg = 0x7f0800fa;
-        public static final int notification_template_icon_low_bg = 0x7f0800fb;
-        public static final int notification_tile_bg = 0x7f0800fc;
-        public static final int notify_panel_notification_icon_bg = 0x7f0800fd;
+        public static final int mapbox_compass_icon = 0x7f0800db;
+        public static final int mapbox_info_bg_selector = 0x7f0800dc;
+        public static final int mapbox_info_icon_default = 0x7f0800dd;
+        public static final int mapbox_info_icon_selected = 0x7f0800de;
+        public static final int mapbox_logo_helmet = 0x7f0800df;
+        public static final int mapbox_logo_icon = 0x7f0800e0;
+        public static final int mapbox_marker_icon_default = 0x7f0800e1;
+        public static final int mapbox_markerview_icon_default = 0x7f0800e2;
+        public static final int mapbox_mylocation_bg_shape = 0x7f0800e3;
+        public static final int mapbox_mylocation_icon_bearing = 0x7f0800e4;
+        public static final int mapbox_mylocation_icon_default = 0x7f0800e5;
+        public static final int mapbox_popup_window_transparent = 0x7f0800e6;
+        public static final int mapbox_rounded_corner = 0x7f0800e7;
+        public static final int mapbox_user_bearing_icon = 0x7f0800e8;
+        public static final int mapbox_user_icon = 0x7f0800e9;
+        public static final int mapbox_user_icon_shadow = 0x7f0800ea;
+        public static final int mapbox_user_icon_stale = 0x7f0800eb;
+        public static final int mapbox_user_puck_icon = 0x7f0800ec;
+        public static final int mapbox_user_stroke_icon = 0x7f0800ed;
+        public static final int notification_action_background = 0x7f0800f3;
+        public static final int notification_bg = 0x7f0800f4;
+        public static final int notification_bg_low = 0x7f0800f5;
+        public static final int notification_bg_low_normal = 0x7f0800f6;
+        public static final int notification_bg_low_pressed = 0x7f0800f7;
+        public static final int notification_bg_normal = 0x7f0800f8;
+        public static final int notification_bg_normal_pressed = 0x7f0800f9;
+        public static final int notification_icon_background = 0x7f0800fa;
+        public static final int notification_template_icon_bg = 0x7f0800fb;
+        public static final int notification_template_icon_low_bg = 0x7f0800fc;
+        public static final int notification_tile_bg = 0x7f0800fd;
+        public static final int notify_panel_notification_icon_bg = 0x7f0800fe;
     }
     public static final class id {
         private id() {}
