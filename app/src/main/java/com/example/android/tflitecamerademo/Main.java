@@ -17,13 +17,10 @@ package com.example.android.tflitecamerademo;
  */
 
 
-import android.app.Activity;
-import android.app.DialogFragment;
 import android.app.ProgressDialog;
 //import android.arch.lifecycle.Observer;
 //import android.arch.lifecycle.ViewModelProviders;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -32,8 +29,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 //import android.support.annotation.Nullable;
@@ -44,17 +39,14 @@ import android.os.Bundle;
 ////import android.support.v7.widget.RecyclerViewiew;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 //import android.support.v4.util.Pair;
 import java.io.File;
 import java.io.IOException;
-import java.text.BreakIterator;
 import java.util.List;
 
 import androidx.annotation.Nullable;
@@ -117,6 +109,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
 
     private Uri mDownloadUrl = null;
     private Uri mFileUri = null;
+    private  int stg =0;
 
     private ImageViewModel mDataViewModel;
 
@@ -144,9 +137,9 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
 
         RecyclerViewClickListener listener = (view, image , id) -> {
             if ( id == R.id.upload){
-                Log.d(LOG_TAG, "Button RouteGuideActivity !");
+                Log.d(LOG_TAG, "Button GrpcActivity !");
 
-               Intent intent = new Intent(this, RouteGuideActivity.class);
+               Intent intent = new Intent(this, GrpcActivity.class);
                 startActivity(intent);
             }
 
@@ -182,12 +175,23 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
 
             Uri uri = Uri.parse(position1.imagePath);
             float [] var = classifyFrame(uri);
+            Log.i("HomeActivity", "onCreate: Classifier"+ var.toString());
+            if ((var[0]>var[2])&&(var[0]>var[4])) {
 
+                    stg = (int) var[1];
+            }
+            if ((var[2]>var[0])&&(var[2]>var[4])) {
+
+                stg = (int) var[3];
+            }
+            else {
+                stg = (int) var[5];
+            }
 
 
             ImageRepository stage = new ImageRepository(getApplicationContext());
 
-            stage.stage( var[0], position1.id);
+            stage.stage(stg, position1.id);
             // here is were i change teh listner
 //                position.stage = 3;
 
@@ -528,7 +532,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
 
     public void launchGrpcActivity(View view) {
 
-        Intent intent = new Intent(this, RouteGuideActivity.class);
+        Intent intent = new Intent(this, GrpcActivity.class);
         startActivity(intent);
 
 

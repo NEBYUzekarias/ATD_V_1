@@ -212,14 +212,17 @@ public class ImageClassifier {
         sortedLabels.poll();
       }
     }
-    float [] textToShow ={1,1 ,1 ,1 };
+    float [] textToShow ={1,1 ,1,1,1,1 };
+    String [] key = {"other", "one", "two"};
 //    final int size = sortedLabels.size();
-    for (int i = 0; i < 2; ++i) {
+    for (int i = 0; i < 3; ++i) {
       Map.Entry<String, Float> label = sortedLabels.poll();
-      textToShow[i*2]  = Integer.parseInt(label.getKey());
-      textToShow[(i *2) +1] = label.getValue()*100;
+//      textToShow[i*2]  = Integer.parseInt(label.getKey());
+      textToShow[i*2] = label.getValue()*1000;
+      textToShow[(i*2)+1] = Float.parseFloat(label.getKey());
+      Log.i("value", String.format("\n%s",textToShow[i]));
 
-//      textToShow[0] = String.format("\n%s: %4.2f",label.getKey(),label.getValue()) + textToShow;
+      Log.i("staag" ,String.format("\n%s: %4.2f",textToShow[i*2],textToShow[(i*2)+1]) );
     }
     return textToShow;
   }

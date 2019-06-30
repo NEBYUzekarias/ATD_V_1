@@ -4,8 +4,10 @@ package com.example.android.tflitecamerademo;
 
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 //import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 /***
@@ -92,35 +95,78 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
         return new ViewHolder(v , mListener);
     }
 
+
+
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         Image selectedData = mDataset.get(position);
-        if (selectedData.stage == -1){
-            holder.mTextView.setText(" ");
-        }else {
-        holder.mTextView.setText("stage " + selectedData.stage);}
+
+        if(selectedData.stage==-1){
+            holder.mTextView.setText("");
+
+
+        }
+
+        else if (selectedData.stage==1) {
+            holder.mTextView.setText("stage one ");
+            holder.delete.setVisibility(View.GONE);
+
+        }
+        else if(selectedData.stage==2) {
+            holder.mTextView.setText("stage two ");
+            holder.delete.setVisibility(View.GONE);
+
+        }
+     else if (selectedData.stage==0){
+            holder.mTextView.setText("not eye image");
+
+        holder.delete.setOnClickListener(v -> {
+
+            Log.i("ImageAdapter", "onBindViewHolder: "+selectedData.stage);
+
+
+                new AlertDialog.Builder(holder.itemView.getContext())
+                        .setTitle("Not eye image")
+                        .setMessage("please insert eye image")
+
+                        // Specifying a listener allows you to take an action before dismissing the dialog.
+                        // The dialog is automatically dismissed when a dialog button is clicked.
+                        .setPositiveButton(android.R.string.yes, (dialog, which) -> {
+                            // Continue with delete operation
+
+                        })
+
+                        // A null listener allows the button to dismiss the dialog and take no further action.
+                        .setNegativeButton(android.R.string.no, null)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+
+
+
+
+
+
+
+
+        });
+        }
+
+   else{
+            holder.delete.setVisibility(View.VISIBLE);
+
+        }
+        holder.delete.setImageResource(R.drawable.ic_memory_black_24dp);
+        holder.button.setImageResource(R.drawable.ic_settings_system_daydream_black_24dp);
+        holder.pros.setImageResource(R.drawable.ic_delete);
         Uri uri = Uri.parse(selectedData.imagePath);
         Context context = holder.imageView.getContext();
         Picasso.get().load(uri).fit().into(holder.imageView);
         // holder.imageView.setImageURI(uri);
-        if (selectedData.isUpload) {
-            holder.button.setOnClickListener(view -> Toast.makeText(view.getContext(), "Already uploaded", Toast.LENGTH_SHORT)
-                    .show());
 
 
-            holder.button.setImageResource(R.drawable.ic_done);
-            holder.delete.setVisibility(View.GONE);
-
-        }
-        else{
-            holder.delete.setVisibility(View.VISIBLE);
-            holder.delete.setImageResource(R.drawable.ic_memory_black_24dp);
-            holder.button.setImageResource(R.drawable.ic_settings_system_daydream_black_24dp);
-            holder.pros.setImageResource(R.drawable.ic_delete);
-        }
     }
 
 

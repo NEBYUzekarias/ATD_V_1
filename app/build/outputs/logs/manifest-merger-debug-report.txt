@@ -185,14 +185,14 @@ ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManif
 		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:33:13-32
 	android:name
 		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:32:13-43
-activity#com.example.android.tflitecamerademo.RouteGuideActivity
+activity#com.example.android.tflitecamerademo.GrpcActivity
 ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:35:9-38:59
 	android:parentActivityName
 		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:38:13-47
 	android:label
 		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:37:13-32
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:36:13-47
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:36:13-41
 activity#com.example.android.tflitecamerademo.TakeImage
 ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:39:9-43:68
 	android:parentActivityName

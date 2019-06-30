@@ -33,7 +33,7 @@
             android:label="ATD"
             android:parentActivityName=".Main"></activity>
         <activity
-            android:name=".RouteGuideActivity"
+            android:name=".GrpcActivity"
             android:label="ATD"
             android:parentActivityName=".Main"></activity>
         <activity

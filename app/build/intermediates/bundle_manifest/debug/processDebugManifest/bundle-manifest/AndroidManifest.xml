@@ -55,7 +55,7 @@
             android:label="ATD"
             android:parentActivityName="com.example.android.tflitecamerademo.Main" />
         <activity
-            android:name="com.example.android.tflitecamerademo.RouteGuideActivity"
+            android:name="com.example.android.tflitecamerademo.GrpcActivity"
             android:label="ATD"
             android:parentActivityName="com.example.android.tflitecamerademo.Main" />
         <activity
