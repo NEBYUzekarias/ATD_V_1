@@ -6,22 +6,29 @@
     density="xhdpi"
     format="10"
     plugin-version="3.4.1"
-    timestamp="1561938827710"
+    timestamp="1561938971521"
     token="3427571654169853843"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="METHOD_ADDED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="2633" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="61" />
     <task
         name="verifier"
-        duration="0" />
+        duration="20" />
+
+    <artifact
+        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
@@ -69,7 +76,14 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1561938827710"
-        verifier="COLD_SWAP_REQUESTED" />
+        timestamp="1561938971521"
+        verifier="METHOD_ADDED" >
+        <artifact
+            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+    </build>
 
 </instant-run>
