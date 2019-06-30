@@ -268,7 +268,7 @@ public class GrpcActivity extends Activity {
 
             }
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 70, stream);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 70, stream);
             return stream.toByteArray();
         }
     }
