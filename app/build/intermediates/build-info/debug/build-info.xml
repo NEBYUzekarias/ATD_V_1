@@ -2,13 +2,13 @@
 <instant-run
     abi="armeabi-v7a,armeabi"
     api-level="27"
-    build-mode="HOT_WARM"
+    build-mode="COLD"
     density="xhdpi"
     format="10"
     plugin-version="3.4.1"
-    timestamp="1561938702265"
+    timestamp="1561938827710"
     token="3427571654169853843"
-    verifier="COMPATIBLE" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
@@ -22,10 +22,6 @@
     <task
         name="verifier"
         duration="0" />
-
-    <artifact
-        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-        type="SPLIT" />
 
     <build
         build-mode="FULL"
@@ -72,12 +68,8 @@
             type="SPLIT_MAIN" />
     </build>
     <build
-        build-mode="HOT_WARM"
-        timestamp="1561938702265"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-            type="SPLIT" />
-    </build>
+        build-mode="COLD"
+        timestamp="1561938827710"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
