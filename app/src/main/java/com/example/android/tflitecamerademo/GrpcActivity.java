@@ -208,7 +208,7 @@ public class GrpcActivity extends Activity {
 
         private String getFeature( ImageClassBlockingStub blockingStub)
                 throws StatusRuntimeException, IOException {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.images);
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.stage1);
 
             if(bitmap==null){
 
