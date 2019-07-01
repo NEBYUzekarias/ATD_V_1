@@ -1,11 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-65:12
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-62:12
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-62:12
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-62:12
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-62:12
 MERGED from [androidx.legacy:legacy-support-v13:1.0.0-beta01] /Users/apple/.gradle/caches/transforms-2/files-2.1/13edfd7bf12cf1a8af071fa608375f96/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/a59fcc3cc79962cd3eaf83745a8d1012/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/d6470336b077e1205cef0acc112f5eb6/AndroidManifest.xml:17:1-22:12
 MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.40.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/4e6d6929191c5132c2ecc1a170e61a8a/AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.material:material:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/500249e1330b819aa65ec640f19ec48b/AndroidManifest.xml:17:1-24:12
 MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation:0.40.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/7c9db1d917ec6194ffec8744edc236e1/AndroidManifest.xml:2:1-17:12
@@ -55,25 +56,24 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/apple/.gradle/cach
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/252623bfab738455d6369fdddc332135/AndroidManifest.xml:17:1-22:12
 MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/6bd50397817f4f2eca55e0aad2463009/AndroidManifest.xml:2:1-11:12
 MERGED from [org.tensorflow:tensorflow-lite:1.13.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/782bd49c19e0f220f143595096714be1/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.multidex:multidex:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/d6470336b077e1205cef0acc112f5eb6/AndroidManifest.xml:17:1-22:12
 MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/78a5cbe61e31d9017f11131c9eeeb197/AndroidManifest.xml:2:1-13:12
 MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/87c0c98107595db8c587bb39ad4d6c9e/AndroidManifest.xml:2:1-9:12
 MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.3.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/8d065b205a1898392522619015a8b25c/AndroidManifest.xml:2:1-14:12
 MERGED from [com.mapbox.navigator:mapbox-navigation-native:6.2.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/f7836aaa18336db00f640dfa41b944ca/AndroidManifest.xml:2:1-7:12
-INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-65:12
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-62:12
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-62:12
+INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-62:12
 	package
 		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:3:5-51
 		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-65:12
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-62:12
 		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-65:12
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:1-62:12
 		INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:2:11-69
@@ -112,7 +112,7 @@ ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManif
 	android:name
 		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:12:19-67
 application
-ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:14:5-63:19
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:14:5-60:19
 MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.40.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/4e6d6929191c5132c2ecc1a170e61a8a/AndroidManifest.xml:9:5-11:19
 MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.40.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/4e6d6929191c5132c2ecc1a170e61a8a/AndroidManifest.xml:9:5-11:19
 MERGED from [com.google.android.material:material:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/500249e1330b819aa65ec640f19ec48b/AndroidManifest.xml:22:5-20
@@ -164,85 +164,79 @@ ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManif
 	android:name
 		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:21:13-42
 activity#com.example.android.tflitecamerademo.Main
-ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:24:9-31:20
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:24:9-32:20
+	android:theme
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:25:13-55
 	android:name
 		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:24:19-39
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:25:13-30:29
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:26:13-31:29
 action#android.intent.action.VIEW
-ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:26:17-68
-	android:name
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:26:25-66
-action#android.intent.action.MAIN
-ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:27:17-69
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:27:17-68
 	android:name
 		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:27:25-66
+action#android.intent.action.MAIN
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:28:17-69
+	android:name
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:29:17-77
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:29:27-74
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:30:27-74
 activity#com.example.android.tflitecamerademo.CameraActivity
-ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:32:9-35:49
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:33:9-36:49
 	android:parentActivityName
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:35:13-47
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:36:13-47
 	android:label
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:34:13-32
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:35:13-32
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:33:13-43
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:34:13-43
 activity#com.example.android.tflitecamerademo.GrpcActivity
-ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:36:9-39:49
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:37:9-40:49
 	android:parentActivityName
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:39:13-47
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:40:13-47
 	android:label
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:38:13-32
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:39:13-32
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:37:13-41
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:38:13-41
 activity#com.example.android.tflitecamerademo.TakeImage
-ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:40:9-44:58
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:41:9-45:58
 	android:parentActivityName
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:43:13-47
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:44:13-47
 	android:label
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:42:13-32
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:43:13-32
 	android:theme
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:44:13-56
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:45:13-56
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:41:13-38
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:42:13-38
 activity#com.example.android.tflitecamerademo.InfoActivity
-ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:45:9-48:59
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:46:9-49:58
 	android:label
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:47:13-56
-	android:theme
 		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:48:13-56
+	android:theme
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:49:13-55
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:46:13-41
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:47:13-41
 activity#com.example.android.tflitecamerademo.AboutActivity
-ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:49:9-52:59
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:50:9-52:60
 	android:label
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:51:13-57
-	android:theme
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:52:13-56
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:52:13-57
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:50:13-42
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:51:13-42
 activity#com.example.android.tflitecamerademo.HospitalActivity
-ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:53:9-57:59
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:53:9-55:49
 	android:parentActivityName
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:56:13-47
-	android:label
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:55:13-57
-	android:theme
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:57:13-56
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:55:13-47
 	android:name
 		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:54:13-45
 activity#com.example.android.tflitecamerademo.MainActivity
-ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:58:9-62:59
+ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:56:9-59:58
 	android:parentActivityName
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:61:13-59
-	android:label
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:60:13-57
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:58:13-59
 	android:theme
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:62:13-56
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:59:13-55
 	android:name
-		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:59:13-41
+		ADDED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml:57:13-41
 uses-sdk
 INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/apple/Documents/finalProject/ATD_V_1/app/src/main/AndroidManifest.xml
@@ -251,6 +245,8 @@ MERGED from [androidx.legacy:legacy-support-v13:1.0.0-beta01] /Users/apple/.grad
 MERGED from [androidx.legacy:legacy-support-v13:1.0.0-beta01] /Users/apple/.gradle/caches/transforms-2/files-2.1/13edfd7bf12cf1a8af071fa608375f96/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/a59fcc3cc79962cd3eaf83745a8d1012/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/a59fcc3cc79962cd3eaf83745a8d1012/AndroidManifest.xml:20:5-44
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/d6470336b077e1205cef0acc112f5eb6/AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/d6470336b077e1205cef0acc112f5eb6/AndroidManifest.xml:20:5-43
 MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.40.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/4e6d6929191c5132c2ecc1a170e61a8a/AndroidManifest.xml:5:5-7:41
 MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.40.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/4e6d6929191c5132c2ecc1a170e61a8a/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.material:material:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/500249e1330b819aa65ec640f19ec48b/AndroidManifest.xml:20:5-44
@@ -349,8 +345,6 @@ MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/apple/.gradle/caches/tra
 MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/6bd50397817f4f2eca55e0aad2463009/AndroidManifest.xml:5:5-7:41
 MERGED from [org.tensorflow:tensorflow-lite:1.13.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/782bd49c19e0f220f143595096714be1/AndroidManifest.xml:5:5-7:41
 MERGED from [org.tensorflow:tensorflow-lite:1.13.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/782bd49c19e0f220f143595096714be1/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.multidex:multidex:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/d6470336b077e1205cef0acc112f5eb6/AndroidManifest.xml:20:5-43
-MERGED from [androidx.multidex:multidex:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/d6470336b077e1205cef0acc112f5eb6/AndroidManifest.xml:20:5-43
 MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/78a5cbe61e31d9017f11131c9eeeb197/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/78a5cbe61e31d9017f11131c9eeeb197/AndroidManifest.xml:7:5-9:41
 MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/87c0c98107595db8c587bb39ad4d6c9e/AndroidManifest.xml:5:5-43

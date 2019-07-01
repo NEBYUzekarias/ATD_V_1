@@ -4015,7 +4015,7 @@ gesperrt</string><string name="feedback_submitted">Rückmeldung gesendet</string
         <item name="android:textAppearance">?android:textAppearanceLarge</item>
         <item name="android:lineSpacingMultiplier">1.2</item>
         <item name="android:shadowDy">-6.5</item>
-    </style></file><file path="/Users/apple/Documents/finalProject/ATD_V_1/app/src/main/res/values/colors.xml" qualifiers=""><color name="control_background">#cc4285f4</color><color name="colorPrimary">#3F51B5</color><color name="colorPrimaryDark">#303F9F</color><color name="colorAccent">#FF4081</color><color name="background_color">#000000</color><color name="textPrimary">#000000</color><color name="mapboxBlue">#4264fb</color><color name="mapboxGrayLight">#c6d2e1</color><color name="mapboxWhite">#ffffff</color><color name="textSecondary">#444444</color><color name="activityBackground">#c0c0c0</color><color name="actionBarDivider">#FFFFFF</color></file><file path="/Users/apple/Documents/finalProject/ATD_V_1/app/src/main/res/values/dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen><dimen name="fab_dim">16dp</dimen><dimen name="standard_field_width">80dp</dimen><dimen name="margin_1">8dp</dimen><dimen name="margin_2">16dp</dimen><dimen name="fab_margin">16dp</dimen><dimen name="notification_size">10dp</dimen><dimen name="app_bar_height">180dp</dimen><dimen name="text_margin">16dp</dimen><dimen name="nav_header_vertical_spacing">8dp</dimen><dimen name="nav_header_height">176dp</dimen></file><file path="/Users/apple/Documents/finalProject/ATD_V_1/app/src/main/res/values/base-strings.xml" qualifiers=""><string name="app_name">TfLiteCameraDemo</string><string name="intro_message">
+    </style></file><file path="/Users/apple/Documents/finalProject/ATD_V_1/app/src/main/res/values/colors.xml" qualifiers=""><color name="control_background">#cc4285f4</color><color name="colorPrimary">#3F51B5</color><color name="colorPrimaryDark">#303F9F</color><color name="colorAccent">#FF4081</color><color name="background_color">#000000</color><color name="textPrimary">#000000</color><color name="mapboxBlue">#4264fb</color><color name="mapboxGrayLight">#c6d2e1</color><color name="mapboxWhite">#ffffff</color><color name="black">#000000</color><color name="white">#ffffff</color><color name="black_effective">#2a2a2a</color><color name="textSecondary">#444444</color><color name="activityBackground">#c0c0c0</color><color name="actionBarDivider">#FFFFFF</color></file><file path="/Users/apple/Documents/finalProject/ATD_V_1/app/src/main/res/values/dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen><dimen name="fab_dim">16dp</dimen><dimen name="standard_field_width">80dp</dimen><dimen name="margin_1">8dp</dimen><dimen name="margin_2">16dp</dimen><dimen name="fab_margin">16dp</dimen><dimen name="notification_size">10dp</dimen><dimen name="app_bar_height">180dp</dimen><dimen name="text_margin">16dp</dimen><dimen name="nav_header_vertical_spacing">8dp</dimen><dimen name="nav_header_height">176dp</dimen></file><file path="/Users/apple/Documents/finalProject/ATD_V_1/app/src/main/res/values/base-strings.xml" qualifiers=""><string name="app_name">TfLiteCameraDemo</string><string name="intro_message">
         <![CDATA[
         
             
@@ -4036,13 +4036,29 @@ gesperrt</string><string name="feedback_submitted">Rückmeldung gesendet</string
         <item name="android:layout_marginLeft">48dp</item>
         <item name="android:layout_marginBottom">1dp</item>
         <item name="android:layout_marginTop">1dp</item>
+    </style><style name="Toolbar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style><style name="Toolbar.TitleText" parent="TextStyle.Heading">
+        <item name="android:textColor">@color/black_effective</item>
+        <item name="android:textSize">22sp</item>
+    </style><style name="TextStyle.Heading" parent="TextStyle">
+        <item name="android:textSize">16sp</item>
+    </style><style name="TextStyle">
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:textColor">@color/black_effective</item>
     </style><style name="radioFrame">
         <item name="android:paddingBottom">8dp</item>
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingLeft">24dp</item>
         <item name="android:paddingRight">24dp</item>
         <item name="android:layout_gravity">center</item>
-    </style><style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style><style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -4052,16 +4068,24 @@ gesperrt</string><string name="feedback_submitted">Rückmeldung gesendet</string
         
         <item name="android:buttonStyle">@style/buttonColor</item>
 
-        <item name="colorControlNormal">@color/colorPrimaryDark</item>
-        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
 
         
         <item name="android:textColor">@color/textPrimary</item>
         <item name="android:textColorPrimary">@color/textPrimary</item>
         <item name="android:actionMenuTextColor">@color/textPrimary</item>
         <item name="android:textColorSecondary">@color/textSecondary</item>
-
         <item name="android:windowBackground">@color/activityBackground</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style><style name="AppTheme.no_toolbar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style><style name="AppTheme.no_toolbar.fullscreen">
+        <item name="android:windowFullscreen">true</item>
+    </style><style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
     </style><style name="buttonColor" parent="@android:style/Widget.Button">
         <item name="android:textColor">@color/textPrimary</item>
     </style><style name="AppTheme.NoActionBar" parent="AppTheme">

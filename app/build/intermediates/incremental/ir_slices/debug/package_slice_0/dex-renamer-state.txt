@@ -1,4 +1,0 @@
-#Mon Jul 01 04:03:08 EAT 2019
-base.0=/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/transforms/dexMerger/debug/0
-path.0=classes.dex
-renamed.0=classes.dex
