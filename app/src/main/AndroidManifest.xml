@@ -20,9 +20,10 @@
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".Main">
             <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -31,16 +32,16 @@
         <activity
             android:name=".CameraActivity"
             android:label="ATD"
-            android:parentActivityName=".Main"></activity>
+            android:parentActivityName=".Main"/>
         <activity
             android:name=".GrpcActivity"
             android:label="ATD"
-            android:parentActivityName=".Main"></activity>
+            android:parentActivityName=".Main"/>
         <activity
             android:name=".TakeImage"
             android:label="ATD"
             android:parentActivityName=".Main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".InfoActivity"
             android:label="@string/title_activity_info"

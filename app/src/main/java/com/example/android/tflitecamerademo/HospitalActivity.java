@@ -40,15 +40,10 @@ public class HospitalActivity extends AppCompatActivity {
 
         mToolbar = findViewById(R.id.hospital_toolbar);
 
-
-
         if (getSupportActionBar()!=null){
             setSupportActionBar(mToolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
-            mToolbar.setNavigationOnClickListener(view -> finish());
         }
-
 
     }
     public void getFeature(View view) {
@@ -72,6 +67,11 @@ public class HospitalActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        return super.onPrepareOptionsMenu(menu);
     }
 
     @Override

@@ -1250,6 +1250,7 @@ drawable firebase_lockup_400
 drawable gradient_shadow_down
 drawable gradient_shadow_up
 drawable ic_action_info
+drawable ic_add
 drawable ic_add_a_photo_black_24dp
 drawable ic_add_black_24dp
 drawable ic_add_location_black_24dp
