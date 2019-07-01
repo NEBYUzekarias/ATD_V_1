@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Jul 01 03:14:13 EAT 2019
+#Mon Jul 01 04:03:10 EAT 2019
 17.baseType=DIRECTORY
 4.path=model.tflite
 25.base=/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/transforms/mergeJniLibs/debug/0
