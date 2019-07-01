@@ -15,14 +15,14 @@
         >
 
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
+        <!--<androidx.cardview.widget.CardView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="350dp"-->
 
-            android:layout_gravity="center"
+            <!--android:layout_gravity="center"-->
 
 
-            style="@style/cardView"/>
+            <!--style="@style/cardView"/>-->
 
         <RelativeLayout
             android:layout_width="match_parent"
