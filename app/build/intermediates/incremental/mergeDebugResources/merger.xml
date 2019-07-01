@@ -4046,8 +4046,8 @@ gesperrt</string><string name="feedback_submitted">Rückmeldung gesendet</string
         <item name="android:textColorPrimary">@color/textPrimary</item>
         <item name="android:actionMenuTextColor">@color/textPrimary</item>
         <item name="android:textColorSecondary">@color/textSecondary</item>
-
         <item name="android:windowBackground">@color/activityBackground</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style><style name="buttonColor" parent="@android:style/Widget.Button">
         <item name="android:textColor">@color/textPrimary</item>
     </style><style name="AppTheme.NoActionBar" parent="AppTheme">

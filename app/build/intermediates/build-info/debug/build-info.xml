@@ -6,7 +6,7 @@
     density="xhdpi"
     format="10"
     plugin-version="3.4.1"
-    timestamp="1561942480173"
+    timestamp="1561942842660"
     token="3427571654169853843"
     verifier="COMPATIBLE" >
 
@@ -73,7 +73,7 @@
     </build>
     <build
         build-mode="HOT_WARM"
-        timestamp="1561942480173"
+        timestamp="1561942842660"
         verifier="COMPATIBLE" >
         <artifact
             location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
