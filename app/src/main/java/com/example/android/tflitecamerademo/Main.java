@@ -76,7 +76,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
     //private FirebaseAuth mAuth;
     static final int DIM_IMG_SIZE_X = 224;
     static final int DIM_IMG_SIZE_Y = 224;
-//    private ImageView imageView;
+    //    private ImageView imageView;
     private static final String LOG_TAG =
             Main.class.getSimpleName();
     private static final String TAG = "Storage#MainActivity";
@@ -162,11 +162,6 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
         mToolbar = findViewById(R.id.home_toolbar);
 
         setSupportActionBar(mToolbar);
-
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setDisplayShowHomeEnabled(true);
-        }
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
@@ -579,7 +574,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onDestroy() {
-        classifier.close();
+        if (classifier != null)
+            classifier.close();
         super.onDestroy();
     }
 
