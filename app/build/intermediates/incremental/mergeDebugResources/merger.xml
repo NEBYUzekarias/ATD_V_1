@@ -4088,6 +4088,9 @@ gesperrt</string><string name="feedback_submitted">Rückmeldung gesendet</string
     </style><style name="Toolbar.TitleText" parent="TextStyle.Heading">
         <item name="android:textColor">@color/black_effective</item>
         <item name="android:textSize">22sp</item>
+    </style><style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
     </style></file><file path="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/res/values/strings.xml" qualifiers=""><string name="picture">Picture</string><string name="description_info">Info</string><string name="request_permission">This sample needs camera permission.</string><string name="camera_error">This device doesn\'t support Camera2 API.</string><string name="toggle_turn_on">NN:On</string><string name="toggle_turn_off">NN:Off</string><string name="toggle">Use NNAPI</string><string name="sports_info_placeholder">Here is some news</string><string name="news_placeholder">News</string><string name="title_placeholder">Title</string><string-array name="sports_titles">
         <item>Baseball</item>
         <item>Badminton</item>

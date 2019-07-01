@@ -90,6 +90,11 @@
         <item name="android:windowBackground">@color/activityBackground</item>
     </style>
 
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
     <!--change text color of all buttons-->
     <style name="buttonColor" parent="@android:style/Widget.Button">
         <item name="android:textColor">@color/textPrimary</item>
