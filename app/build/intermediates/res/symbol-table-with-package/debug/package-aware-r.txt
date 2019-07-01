@@ -1539,6 +1539,7 @@ id guideline
 id hawasa
 id home
 id homeAsUp
+id home_toolbar
 id hospital_map
 id hospital_toolbar
 id host_edit_text

@@ -40,8 +40,8 @@ service ImageClass {
 // The request message containing the string to be labeled
 message GrpcRequest {
     //string name = 1;
-//    bytes  image = 1;
-    repeated int32 image = 1 [packed=true];
+    bytes  image = 1;
+//    repeated int32 image = 1 [packed=true];
 
 
 
