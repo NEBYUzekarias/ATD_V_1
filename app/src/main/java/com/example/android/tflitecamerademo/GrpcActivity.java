@@ -226,7 +226,7 @@ public class GrpcActivity extends Activity {
             Pickler pickler = new Pickler();
             ByteString data = ByteString.copyFrom(pickler.dumps(getBytesFromBitmap(bitmap)));
             // here is were i send the image to grpc
-            GrpcRequest request = GrpcRequest.newBuilder().setImage(data).build();
+            GrpcRequest request = GrpcRequest.newBuilder().setImage(ByteString.copyFrom(getBytesFromBitmap(bitmap))).build();
 
             GrpcReply feature;
             if (request != null) {

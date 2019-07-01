@@ -1,37 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/Users/apple/Documents/finalProject/ATD_V_1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/home/kidusmt/.gradle/caches/transforms-2/files-2.1/e96a6641035a149ab00873d6957a205c/res/values-land/values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "55,112,173,238,296",
-                        "endColumns": "56,60,64,57,50",
-                        "endOffsets": "107,168,233,291,342"
-                    },
-                    "to": {
-                        "startLines": "5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "264,321,382,447,505",
-                        "endColumns": "56,60,64,57,50",
-                        "endOffsets": "316,377,442,500,551"
-                    }
-                },
-                {
-                    "source": "/home/kidusmt/.gradle/caches/transforms-2/files-2.1/42c40a12549390238ad970a1ee0234c1/res/values-land/values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,125,196",
-                        "endColumns": "69,70,67",
-                        "endOffsets": "120,191,259"
-                    }
-                },
-                {
-                    "source": "/home/kidusmt/.gradle/caches/transforms-2/files-2.1/5516738d2ab09fdb69b44f232dd97526/res/values-land/values-land.xml",
+                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/500249e1330b819aa65ec640f19ec48b/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -47,6 +20,33 @@
                         "endLines": "13",
                         "endColumns": "10",
                         "endOffsets": "723"
+                    }
+                },
+                {
+                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/07af8723dc2b4cbf5fa3d99451bc848b/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                },
+                {
+                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/4e6d6929191c5132c2ecc1a170e61a8a/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,112,173,238,296",
+                        "endColumns": "56,60,64,57,50",
+                        "endOffsets": "107,168,233,291,342"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "264,321,382,447,505",
+                        "endColumns": "56,60,64,57,50",
+                        "endOffsets": "316,377,442,500,551"
                     }
                 }
             ]

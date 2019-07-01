@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-he/values-he.xml",
+            "outputFile": "/Users/apple/Documents/finalProject/ATD_V_1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-he/values-he.xml",
             "map": [
                 {
-                    "source": "/home/kidusmt/.gradle/caches/transforms-2/files-2.1/e96a6641035a149ab00873d6957a205c/res/values-he/values-he.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,118,180,256,315,391,458,524,588,647,712,773,816,860,917",
-                        "endColumns": "62,61,75,58,75,66,65,63,58,64,60,42,43,56,44",
-                        "endOffsets": "113,175,251,310,386,453,519,583,642,707,768,811,855,912,957"
-                    },
-                    "to": {
-                        "startLines": "3,4,5,7,8,9,10,11,12,13,14,28,30,31,32",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "109,172,234,364,423,499,566,632,696,755,820,2240,2353,2397,2454",
-                        "endColumns": "62,61,75,58,75,66,65,63,58,64,60,42,43,56,44",
-                        "endOffsets": "167,229,305,418,494,561,627,691,750,815,876,2278,2392,2449,2494"
-                    }
-                },
-                {
-                    "source": "/home/kidusmt/.gradle/caches/transforms-2/files-2.1/8dde878a416061a57df29f35ebd26967/res/values-he/values-he.xml",
+                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/7c9db1d917ec6194ffec8744edc236e1/res/values-he/values-he.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/kidusmt/.gradle/caches/transforms-2/files-2.1/e123abf1be54116351af79487f3490cb/res/values-he/values-he.xml",
+                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/8a3115884aee86d94633c10df9dea571/res/values-he/values-he.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -52,6 +35,23 @@
                         "startOffsets": "881,1003,1157,1233,1306,1379,1464,1551,1667,1770,1920,2034,2171",
                         "endColumns": "121,153,75,72,72,84,86,115,102,149,113,136,68",
                         "endOffsets": "998,1152,1228,1301,1374,1459,1546,1662,1765,1915,2029,2166,2235"
+                    }
+                },
+                {
+                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/4e6d6929191c5132c2ecc1a170e61a8a/res/values-he/values-he.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,118,180,256,315,391,458,524,588,647,712,773,816,860,917",
+                        "endColumns": "62,61,75,58,75,66,65,63,58,64,60,42,43,56,44",
+                        "endOffsets": "113,175,251,310,386,453,519,583,642,707,768,811,855,912,957"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,7,8,9,10,11,12,13,14,28,30,31,32",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "109,172,234,364,423,499,566,632,696,755,820,2240,2353,2397,2454",
+                        "endColumns": "62,61,75,58,75,66,65,63,58,64,60,42,43,56,44",
+                        "endOffsets": "167,229,305,418,494,561,627,691,750,815,876,2278,2392,2449,2494"
                     }
                 }
             ]
