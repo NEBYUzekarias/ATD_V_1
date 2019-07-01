@@ -18,8 +18,6 @@ package com.example.android.tflitecamerademo;
 
 
 import android.app.ProgressDialog;
-//import android.arch.lifecycle.Observer;
-//import android.arch.lifecycle.ViewModelProviders;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -31,12 +29,6 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-//import android.support.annotation.Nullable;
-//import android.support.v4.app.ActivityOptionsCompat;
-//import android.support.v4.content.LocalBroadcastManager;
-//import android.support.v7.app.AppCompatActivity;
-////import android.support.v7.widget.LinearLayoutManager;
-////import android.support.v7.widget.RecyclerViewiew;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Menu;
@@ -44,83 +36,132 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
-//import android.support.v4.util.Pair;
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.util.Pair;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.multidex.MultiDex;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
 import static android.widget.Toast.makeText;
+
+//import android.arch.lifecycle.Observer;
+//import android.arch.lifecycle.ViewModelProviders;
+//import android.support.annotation.Nullable;
+//import android.support.v4.app.ActivityOptionsCompat;
+//import android.support.v4.content.LocalBroadcastManager;
+//import android.support.v7.app.AppCompatActivity;
+////import android.support.v7.widget.LinearLayoutManager;
+////import android.support.v7.widget.RecyclerViewiew;
+//import android.support.v4.util.Pair;
 
 /**
  * Activity to upload and download photos from Firebase Storage.
  * <p>
  */
-public class Main extends AppCompatActivity implements View.OnClickListener  {
+public class Main extends AppCompatActivity implements View.OnClickListener {
 
 
+    public static final String DATA_ID = "data_id";
+    public static final String DATA_STAGE = "data_stage";
+    //private FirebaseAuth mAuth;
+    static final int DIM_IMG_SIZE_X = 224;
+    static final int DIM_IMG_SIZE_Y = 224;
+    //    private ImageView imageView;
+    private static final String LOG_TAG =
+            Main.class.getSimpleName();
+    private static final String TAG = "Storage#MainActivity";
+    private static final int RC_TAKE_PICTURE = 101;
+    private static final String KEY_FILE_URI = "key_file_uri";
+    private static final String KEY_DOWNLOAD_URL = "key_download_url";
+    private final int imageWidthPixels = 1024;
+    private final int imageHeightPixels = 768;
+    public CountDrawable badge;
+    public CountDrawable countDrawable;
+    public Image position;
+    ImageButton floatButton;
+    //    ImageButton hospitalMap;
+    View upload;
+    Toolbar mToolbar;
     // Recycle view
 //    private RecyclerView mRecyclerView;
     private ImageListAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    public CountDrawable badge;
     private LayerDrawable icon;
-//    private ImageView imageView;
-
     private ImageClassifier classifier;
-
-
-    private static final String LOG_TAG =
-            Main.class.getSimpleName();
-
-    private static final String TAG = "Storage#MainActivity";
-
-    private static final int RC_TAKE_PICTURE = 101;
-
-    public static final String DATA_ID = "data_id";
-    public static final String DATA_STAGE = "data_stage";
-
-    private static final String KEY_FILE_URI = "key_file_uri";
-    private static final String KEY_DOWNLOAD_URL = "key_download_url";
-
     private BroadcastReceiver mBroadcastReceiver;
     private ProgressDialog mProgressDialog;
     private Drawable reuse;
     private int count;
-
-    private final int imageWidthPixels = 1024;
-    private final int imageHeightPixels = 768;
-    //private FirebaseAuth mAuth;
-    static final int DIM_IMG_SIZE_X = 224;
-    static final int DIM_IMG_SIZE_Y = 224;
-    ImageButton floatButton;
-//    ImageButton hospitalMap;
-    View upload;
-    public CountDrawable countDrawable;
-    public Image position;
-
     private Uri mDownloadUrl = null;
     private Uri mFileUri = null;
-    private  int stg =0;
-
+    private int stg = 0;
     private ImageViewModel mDataViewModel;
+
+    public static int calculateInSampleSize(
+            BitmapFactory.Options options, int reqWidth, int reqHeight) {
+        // Raw height and width of image
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
+
+        if (height > reqHeight || width > reqWidth) {
+
+            final int halfHeight = height / 2;
+            final int halfWidth = width / 2;
+
+            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
+            // height and width larger than the requested height and width.
+            while ((halfHeight / inSampleSize) >= reqHeight
+                    && (halfWidth / inSampleSize) >= reqWidth) {
+                inSampleSize *= 2;
+            }
+        }
+
+        return inSampleSize;
+    }
+
+    public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
+                                                         int reqWidth, int reqHeight) {
+
+        // First decode with inJustDecodeBounds=true to check dimensions
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeResource(res, resId, options);
+
+        // Calculate inSampleSize
+        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
+
+        // Decode bitmap with inSampleSize set
+        options.inJustDecodeBounds = false;
+        return BitmapFactory.decodeResource(res, resId, options);
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        MultiDex.install(this);
         setContentView(R.layout.activity_main);
 
         // start RecycleView
-        EmptyRecyclerView  mRecyclerView ;
-        mRecyclerView =(EmptyRecyclerView)findViewById(R.id.my_recycler_view);
+        EmptyRecyclerView mRecyclerView;
+        mRecyclerView = (EmptyRecyclerView) findViewById(R.id.my_recycler_view);
+
+        mToolbar = findViewById(R.id.home_toolbar);
+
+        setSupportActionBar(mToolbar);
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
@@ -135,24 +176,21 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
         View emptyView = findViewById(R.id.todo_list_empty_view);
         mRecyclerView.setEmptyView(emptyView);
 
-        RecyclerViewClickListener listener = (view, image , id) -> {
-            if ( id == R.id.upload){
+        RecyclerViewClickListener listener = (view, image, id) -> {
+            if (id == R.id.upload) {
                 Log.d(LOG_TAG, "Button GrpcActivity !");
 
-               Intent intent = new Intent(this, GrpcActivity.class);
+                Intent intent = new Intent(this, GrpcActivity.class);
                 startActivity(intent);
-            }
-
-            else {
-
+            } else {
 
 
                 Intent intent = new Intent(this, DetailActivity.class);
 // Pass data object in the bundle and populate details activity.
-                Pair<View, String> p1 = Pair.create((View)findViewById(R.id.im_stage), "image");
+                Pair<View, String> p1 = Pair.create((View) findViewById(R.id.im_stage), "image");
 
                 ActivityOptionsCompat options = ActivityOptionsCompat.
-                        makeSceneTransitionAnimation(this,p1);
+                        makeSceneTransitionAnimation(this, p1);
                 startActivity(intent, options.toBundle());
 //                startActivity(new Intent(this, DetailActivity.class));
 
@@ -163,28 +201,25 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
         ImageListAdapter.ButtonListener buttonListener = (v, position1) -> {
             position = position1;
 //                showNoticeDialog();
-            try{
-            classifier = new ImageClassifier(Main.this);
+            try {
+                classifier = new ImageClassifier(Main.this);
 
             } catch (IOException e) {
                 Log.e(TAG, "Failed to initialize an image classifier.");
             }
 
 
-
-
             Uri uri = Uri.parse(position1.imagePath);
-            float [] var = classifyFrame(uri);
-            Log.i("HomeActivity", "onCreate: Classifier"+ var.toString());
-            if ((var[0]>var[2])&&(var[0]>var[4])) {
+            float[] var = classifyFrame(uri);
+            Log.i("HomeActivity", "onCreate: Classifier" + var.toString());
+            if ((var[0] > var[2]) && (var[0] > var[4])) {
 
-                    stg = (int) var[1];
+                stg = (int) var[1];
             }
-            if ((var[2]>var[0])&&(var[2]>var[4])) {
+            if ((var[2] > var[0]) && (var[2] > var[4])) {
 
                 stg = (int) var[3];
-            }
-            else {
+            } else {
                 stg = (int) var[5];
             }
 
@@ -204,7 +239,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
             public void deleteOnClick(View v, Image position1) {
                 position = position1;
 //                showNoticeDialog();
-                try{
+                try {
                     classifier = new ImageClassifier(Main.this);
 
                 } catch (IOException e) {
@@ -212,16 +247,13 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
                 }
 
 
-
-
                 Uri uri = Uri.parse(position1.imagePath);
-                float [] var = classifyFrame(uri);
-
+                float[] var = classifyFrame(uri);
 
 
                 ImageRepository stage = new ImageRepository(getApplicationContext());
 
-                stage.stage( var[0], position1.id);
+                stage.stage(var[0], position1.id);
                 stage.delete(position);
                 // here is were i change teh listner
 //                position.stage = 3;
@@ -231,10 +263,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
         };
 
 
-
-
-
-        mAdapter = new ImageListAdapter(listener, buttonListener , butn);
+        mAdapter = new ImageListAdapter(listener, buttonListener, butn);
         mRecyclerView.setAdapter(mAdapter);
         countDrawable = new CountDrawable();
 
@@ -376,7 +405,6 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
 //        mFileUri = intent.getParcelableExtra(MyUploadService.EXTRA_FILE_URI);
     }
 
-
     private void showProgressDialog(String caption) {
         if (mProgressDialog == null) {
             mProgressDialog = new ProgressDialog(this);
@@ -421,7 +449,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
     public void onClick(View v) {
         int i = v.getId();
 
-        if (i==R.id.add_fab_btn) {
+        if (i == R.id.add_fab_btn) {
             Intent open_collector = new Intent(this, TakeImage.class);
             startActivity(open_collector);
         }
@@ -433,6 +461,12 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
 
 
     }
+//
+//    public void showNoticeDialog() {
+//        // Create an instance of the dialog fragment and show it
+//        DialogFragment dialog = new DeleteDialogFragment();
+//        dialog.show(getFragmentManager(),"DeleteDialogFragment");
+//    }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
@@ -470,8 +504,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
         List<Image> datas = mDataViewModel.getAllImage().getValue();
         count = 0;
         if (datas != null) {
-            for (Image data: datas){
-                if (!data.isUpload){
+            for (Image data : datas) {
+                if (!data.isUpload) {
                     count = count + 1;
                 }
             }
@@ -482,38 +516,6 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
 
         return true;
     }
-
-
-    public void setCount(Context context, String count, LayerDrawable icon) {
-
-        reuse = icon.findDrawableByLayerId(R.id.ic_group_count);
-        if (reuse != null && reuse instanceof CountDrawable) {
-            badge = (CountDrawable) reuse;
-        } else {
-            badge = new CountDrawable(context);
-        }
-
-        badge.setCount(count);
-        icon.mutate();
-        icon.setDrawableByLayerId(R.id.ic_group_count, badge);
-    }
-//
-//    public void showNoticeDialog() {
-//        // Create an instance of the dialog fragment and show it
-//        DialogFragment dialog = new DeleteDialogFragment();
-//        dialog.show(getFragmentManager(),"DeleteDialogFragment");
-//    }
-
-
-    public boolean isOnline() {
-//        ConnectivityManager connMgr = (ConnectivityManager)
-//                getSystemService(Context.CONNECTIVITY_SERVICE);
-//        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-//        return (networkInfo != null && networkInfo.isConnected());
-        return true;
-
-    }
-
 
 
 //    public void onDialogPositiveClick(DialogFragment dialog ) {
@@ -529,6 +531,28 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
 //        // User touched the dialog's negative button
 //    }
 
+    public void setCount(Context context, String count, LayerDrawable icon) {
+
+        reuse = icon.findDrawableByLayerId(R.id.ic_group_count);
+        if (reuse != null && reuse instanceof CountDrawable) {
+            badge = (CountDrawable) reuse;
+        } else {
+            badge = new CountDrawable(context);
+        }
+
+        badge.setCount(count);
+        icon.mutate();
+        icon.setDrawableByLayerId(R.id.ic_group_count, badge);
+    }
+
+    public boolean isOnline() {
+//        ConnectivityManager connMgr = (ConnectivityManager)
+//                getSystemService(Context.CONNECTIVITY_SERVICE);
+//        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+//        return (networkInfo != null && networkInfo.isConnected());
+        return true;
+
+    }
 
     public void launchGrpcActivity(View view) {
 
@@ -536,8 +560,9 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
         startActivity(intent);
 
 
-        Log.d(LOG_TAG ,"Button2 clicked!");
+        Log.d(LOG_TAG, "Button2 clicked!");
     }
+
     public void launchSecondActivity(View view) {
 
         Intent intent = new Intent(this, CameraActivity.class);
@@ -547,64 +572,21 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
         Log.d(LOG_TAG, "Button clicked!");
     }
 
-
-
-    public static int calculateInSampleSize(
-            BitmapFactory.Options options, int reqWidth, int reqHeight) {
-        // Raw height and width of image
-        final int height = options.outHeight;
-        final int width = options.outWidth;
-        int inSampleSize = 1;
-
-        if (height > reqHeight || width > reqWidth) {
-
-            final int halfHeight = height / 2;
-            final int halfWidth = width / 2;
-
-            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
-            // height and width larger than the requested height and width.
-            while ((halfHeight / inSampleSize) >= reqHeight
-                    && (halfWidth / inSampleSize) >= reqWidth) {
-                inSampleSize *= 2;
-            }
-        }
-
-        return inSampleSize;
-    }
-
-    public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
-                                                         int reqWidth, int reqHeight) {
-
-        // First decode with inJustDecodeBounds=true to check dimensions
-        final BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeResource(res, resId, options);
-
-        // Calculate inSampleSize
-        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
-
-        // Decode bitmap with inSampleSize set
-        options.inJustDecodeBounds = false;
-        return BitmapFactory.decodeResource(res, resId, options);
-
-
-    }
-
-
     @Override
     public void onDestroy() {
-        classifier.close();
+        if (classifier != null)
+            classifier.close();
         super.onDestroy();
     }
 
 
-
-
-    /** Classifies a frame from the preview stream. */
-    private float [] classifyFrame(Uri imageUri) {
-        if (classifier == null || Main.this ==null) {
+    /**
+     * Classifies a frame from the preview stream.
+     */
+    private float[] classifyFrame(Uri imageUri) {
+        if (classifier == null || Main.this == null) {
             Log.e(TAG, "Image classifier has not been initialized; Skipped.");
-            float[] a = {0,0};
+            float[] a = {0, 0};
             return a;
         }
         Bitmap bitmap =
@@ -616,18 +598,16 @@ public class Main extends AppCompatActivity implements View.OnClickListener  {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        float [] textToShow = classifier.classifyFrame(bitmap);
+        float[] textToShow = classifier.classifyFrame(bitmap);
 
         Log.d(LOG_TAG, textToShow + "neba");
 
 
         bitmap.recycle();
 
-        return textToShow  ;
+        return textToShow;
 
     }
-
-
 
 
     public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {

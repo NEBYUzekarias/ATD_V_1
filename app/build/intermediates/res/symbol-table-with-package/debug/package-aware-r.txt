@@ -727,6 +727,8 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color black
+color black_effective
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -884,6 +886,7 @@ color textPrimary
 color textSecondary
 color tooltip_background_dark
 color tooltip_background_light
+color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -1423,6 +1426,7 @@ id Shashe
 id Shashe_map
 id Shashetxt
 id about
+id about_toolbar
 id action0
 id action_bar
 id action_bar_activity_content
@@ -1535,6 +1539,7 @@ id guideline
 id hawasa
 id home
 id homeAsUp
+id home_toolbar
 id hospital_map
 id hospital_toolbar
 id host_edit_text
@@ -2094,6 +2099,8 @@ style AppTheme_Launcher_AppBarOverlay
 style AppTheme_Launcher_PopupOverlay
 style AppTheme_NoActionBar
 style AppTheme_PopupOverlay
+style AppTheme_no_toolbar
+style AppTheme_no_toolbar_fullscreen
 style AppThemeCustomized
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
@@ -2286,6 +2293,7 @@ style Base_Widget_MaterialComponents_TextInputLayout
 style CardView
 style CardView_Dark
 style CardView_Light
+style DrawerArrowStyle
 style MaterialTheme
 style NavigationLocationLayerStyle
 style NavigationMapRoute
@@ -2409,6 +2417,8 @@ style TextAppearance_MaterialComponents_Tab
 style TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 style TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 style TextAppearance_Widget_AppCompat_Toolbar_Title
+style TextStyle
+style TextStyle_Heading
 style Theme_AppCompat
 style Theme_AppCompat_CompactMenu
 style Theme_AppCompat_DayNight
@@ -2478,6 +2488,8 @@ style ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense
+style Toolbar
+style Toolbar_TitleText
 style Widget
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid

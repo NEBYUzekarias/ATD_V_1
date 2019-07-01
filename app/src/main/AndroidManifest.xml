@@ -21,7 +21,8 @@
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Main">
+        <activity android:name=".Main"
+            android:theme="@style/AppTheme.no_toolbar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,21 +46,17 @@
         <activity
             android:name=".InfoActivity"
             android:label="@string/title_activity_info"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.no_toolbar" />
         <activity
             android:name=".AboutActivity"
-            android:label="@string/title_activity_about"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_about" />
         <activity
             android:name=".HospitalActivity"
-            android:label="@string/title_activity_about"
-            android:parentActivityName=".Main"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName=".Main"/>
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_about"
             android:parentActivityName=".HospitalActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.no_toolbar" />
     </application>
 
 </manifest>
