@@ -70,12 +70,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.android.tflitecamerademo.AboutActivity"
-            android:label="@string/title_activity_about"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_about" />
         <activity
             android:name="com.example.android.tflitecamerademo.HospitalActivity"
-            android:parentActivityName="com.example.android.tflitecamerademo.Main"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName="com.example.android.tflitecamerademo.Main" />
         <activity
             android:name="com.example.android.tflitecamerademo.MainActivity"
             android:parentActivityName="com.example.android.tflitecamerademo.HospitalActivity"

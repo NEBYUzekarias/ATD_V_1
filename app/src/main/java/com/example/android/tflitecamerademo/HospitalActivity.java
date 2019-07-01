@@ -31,7 +31,8 @@ public class HospitalActivity extends AppCompatActivity {
     private ManagedChannel channel;
     private Bitmap image;
 
-    private Toolbar mToolbar;
+    Toolbar mToolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +41,11 @@ public class HospitalActivity extends AppCompatActivity {
 
         mToolbar = findViewById(R.id.hospital_toolbar);
 
-        if (getSupportActionBar()!=null){
-            setSupportActionBar(mToolbar);
+        setSupportActionBar(mToolbar);
+
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
     }
@@ -54,6 +57,7 @@ public class HospitalActivity extends AppCompatActivity {
         startActivity(open_collector);
 
     }
+
     public void menelik(View view) {
         double[] lon = {38.774971, 9.039090};
         Intent intent = new Intent(this, MainActivity.class);
@@ -62,7 +66,6 @@ public class HospitalActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

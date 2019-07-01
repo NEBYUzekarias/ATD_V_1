@@ -6,49 +6,46 @@
     density="xhdpi"
     format="10"
     plugin-version="3.4.1"
-    timestamp="1561939482487"
+    timestamp="1561940194120"
     token="3427571654169853843"
-    verifier="MANIFEST_FILE_CHANGE" >
+    verifier="R_CLASS_CHANGE" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="2510" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="52" />
     <task
         name="verifier"
-        duration="0" />
+        duration="4" />
 
     <artifact
-        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
         type="SPLIT" />
     <artifact
         location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
     <artifact
+        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
+    <artifact
         location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
         type="SPLIT" />
     <artifact
         location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
     <artifact
-        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
     <artifact
         location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
@@ -56,14 +53,12 @@
     <artifact
         location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
         type="SPLIT" />
-    <artifact
-        location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1561938550636"
-        verifier="FULL_BUILD_REQUESTED" >
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1561940041502"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
@@ -72,6 +67,44 @@
             type="SPLIT" />
         <artifact
             location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1561940194120"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
         <artifact
             location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
@@ -86,62 +119,13 @@
             location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
             location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1561938971521"
-        verifier="METHOD_ADDED" >
-        <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1561939482487"
-        verifier="MANIFEST_FILE_CHANGE" >
-        <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
             location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
             location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
@@ -149,9 +133,6 @@
         <artifact
             location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
-        <artifact
-            location="/home/kidusmt/AndroidProjects/ATD_V_1-master/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-63:12
-INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-63:12
-INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-63:12
-INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-63:12
+ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-61:12
 MERGED from [androidx.legacy:legacy-support-v13:1.0.0-beta01] /home/kidusmt/.gradle/caches/transforms-2/files-2.1/7d201d6e73dc84ed05d52fc73363200d/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/kidusmt/.gradle/caches/transforms-2/files-2.1/d95974644e122b5a36e7e9731ece3c4c/AndroidManifest.xml:17:1-22:12
 MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.40.0] /home/kidusmt/.gradle/caches/transforms-2/files-2.1/e96a6641035a149ab00873d6957a205c/AndroidManifest.xml:2:1-13:12
@@ -60,20 +60,20 @@ MERGED from [com.facebook.soloader:soloader:0.6.0] /home/kidusmt/.gradle/caches/
 MERGED from [com.jakewharton.timber:timber:4.7.1] /home/kidusmt/.gradle/caches/transforms-2/files-2.1/fd73f2476ddf5d9cc34100a6aad17efa/AndroidManifest.xml:2:1-9:12
 MERGED from [com.mapbox.mapboxsdk:mapbox-android-core:1.3.0] /home/kidusmt/.gradle/caches/transforms-2/files-2.1/389fe4102ecfbe05b89f33ca7eeb5e20/AndroidManifest.xml:2:1-14:12
 MERGED from [com.mapbox.navigator:mapbox-navigation-native:6.2.1] /home/kidusmt/.gradle/caches/transforms-2/files-2.1/03567908f274eb10a1ff1ff28cafd90f/AndroidManifest.xml:2:1-7:12
-INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-63:12
-INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-63:12
-INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-61:12
 	package
 		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:3:5-51
 		INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml
 		INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml
-		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-63:12
+		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-61:12
 		INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml
-		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-63:12
+		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:1-61:12
 		INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:2:11-69
@@ -112,7 +112,7 @@ ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidMani
 	android:name
 		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:12:19-67
 application
-ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:14:5-61:19
+ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:14:5-59:19
 MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.40.0] /home/kidusmt/.gradle/caches/transforms-2/files-2.1/e96a6641035a149ab00873d6957a205c/AndroidManifest.xml:9:5-11:19
 MERGED from [com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.40.0] /home/kidusmt/.gradle/caches/transforms-2/files-2.1/e96a6641035a149ab00873d6957a205c/AndroidManifest.xml:9:5-11:19
 MERGED from [com.google.android.material:material:1.0.0] /home/kidusmt/.gradle/caches/transforms-2/files-2.1/5516738d2ab09fdb69b44f232dd97526/AndroidManifest.xml:22:5-20
@@ -216,29 +216,25 @@ ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidMani
 	android:name
 		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:46:13-41
 activity#com.example.android.tflitecamerademo.AboutActivity
-ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:49:9-52:59
+ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:49:9-51:60
 	android:label
 		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:51:13-57
-	android:theme
-		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:52:13-56
 	android:name
 		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:50:13-42
 activity#com.example.android.tflitecamerademo.HospitalActivity
-ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:53:9-56:59
+ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:52:9-54:49
 	android:parentActivityName
-		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:55:13-47
-	android:theme
-		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:56:13-56
+		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:54:13-47
 	android:name
-		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:54:13-45
+		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:53:13-45
 activity#com.example.android.tflitecamerademo.MainActivity
-ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:57:9-60:59
+ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:55:9-58:59
 	android:parentActivityName
-		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:59:13-59
+		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:57:13-59
 	android:theme
-		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:60:13-56
+		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:58:13-56
 	android:name
-		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:58:13-41
+		ADDED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml:56:13-41
 uses-sdk
 INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/kidusmt/AndroidProjects/ATD_V_1-master/app/src/main/AndroidManifest.xml
