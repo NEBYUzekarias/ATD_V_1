@@ -52,12 +52,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".HospitalActivity"
-            android:label="@string/title_activity_about"
             android:parentActivityName=".Main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_about"
             android:parentActivityName=".HospitalActivity"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

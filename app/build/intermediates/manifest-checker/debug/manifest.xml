@@ -74,12 +74,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.android.tflitecamerademo.HospitalActivity"
-            android:label="@string/title_activity_about"
             android:parentActivityName="com.example.android.tflitecamerademo.Main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.android.tflitecamerademo.MainActivity"
-            android:label="@string/title_activity_about"
             android:parentActivityName="com.example.android.tflitecamerademo.HospitalActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.mapbox.services.android.navigation.ui.v5.MapboxNavigationActivity" />
