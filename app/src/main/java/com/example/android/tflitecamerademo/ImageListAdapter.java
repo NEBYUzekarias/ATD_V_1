@@ -34,7 +34,7 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
     private RecyclerViewClickListener mListener;
     public ButtonListener onClickListener;
     public Delete onClickDelete;
-
+    public HosListener onClickHosListener;
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
@@ -43,6 +43,7 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
         public ImageView imageView;
         public TextView mTextView;
         public ImageView button ;
+        public ImageView hospital;
         private ImageView delete;
         private ImageView pros;
         private RecyclerViewClickListener mListener;
@@ -52,11 +53,12 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
             mTextView = (TextView)v.findViewById(R.id.tv_android);
             imageView = (ImageView)v.findViewById(R.id.img_eye);
             button =  v.findViewById(R.id.upload);
+            hospital = v.findViewById(R.id.map);
             delete = v.findViewById(R.id.delete);
             pros = v.findViewById(R.id.prose);
             delete.setOnClickListener(v1 -> onClickListener.deleteOnClick(v1, ImageListAdapter.this.mDataset.get(getAdapterPosition())));
-            pros.setOnClickListener(v1 -> onClickDelete.deleteOnClick(v1, ImageListAdapter.this.mDataset.get(getAdapterPosition())));
-
+            pros.setOnClickListener(v1 -> onClickDelete.onClick(v1, ImageListAdapter.this.mDataset.get(getAdapterPosition())));
+            hospital.setOnClickListener(v1 -> onClickHosListener.hosOnClick(v1));
             button.setOnClickListener(this);
             imageView.setOnClickListener(this::onClick);
             mListener = listener;
@@ -71,11 +73,11 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ImageListAdapter(RecyclerViewClickListener listener , ButtonListener buttonListener , Delete btn) {
+    public ImageListAdapter(RecyclerViewClickListener listener , ButtonListener buttonListener , Delete btn , HosListener hosp ) {
         this.mListener = (RecyclerViewClickListener) listener;
         this.onClickListener = (ButtonListener) buttonListener;
         this.onClickDelete = btn;
-
+        this.onClickHosListener = hosp;
     }
 
 
@@ -164,7 +166,7 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
         Uri uri = Uri.parse(selectedData.imagePath);
         Context context = holder.imageView.getContext();
         Picasso.get().load(uri).fit().into(holder.imageView);
-        // holder.imageView.setImageURI(uri);
+        holder.imageView.setImageURI(uri);
 
 
     }
@@ -176,9 +178,16 @@ class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.ViewHolder>
         void deleteOnClick(View v, Image position);
 
     }
+    public interface HosListener {
+
+        void hosOnClick(View v);
+
+    }
+
+
     public interface Delete {
 
-        void deleteOnClick(View v, Image position);
+        void onClick(View v, Image position);
 
     }
     // Return the size of your dataset (invoked by the layout manager)

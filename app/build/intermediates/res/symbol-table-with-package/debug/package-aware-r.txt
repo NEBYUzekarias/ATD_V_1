@@ -1252,6 +1252,7 @@ drawable feedback_progress_drawable
 drawable firebase_lockup_400
 drawable gradient_shadow_down
 drawable gradient_shadow_up
+drawable hospital
 drawable ic_action_info
 drawable ic_add
 drawable ic_add_a_photo_black_24dp
@@ -1535,6 +1536,7 @@ id ghost_view
 id gone
 id group_divider
 id groups
+id grpc_image
 id guideline
 id hawasa
 id home
@@ -1542,7 +1544,6 @@ id homeAsUp
 id home_toolbar
 id hospital_map
 id hospital_toolbar
-id host_edit_text
 id ic_group_count
 id icon
 id icon_group
@@ -1574,12 +1575,12 @@ id left
 id line1
 id line3
 id listMode
-id list_features_button
 id list_item
 id logoView
 id mainIm
 id maneuverImage
 id maneuverView
+id map
 id mapView
 id masked
 id media_actions
@@ -1622,13 +1623,11 @@ id parentPanel
 id parent_matrix
 id percent
 id pin
-id port_edit_text
 id progress_circular
 id progress_horizontal
 id prose
 id radio
 id recenterBtn
-id record_route_button
 id rerouteLayout
 id rerouteProgressBar
 id result_text
@@ -1637,7 +1636,6 @@ id right_icon
 id right_side
 id routeInfoBottomSheetView
 id routeOverviewBtn
-id route_chat_button
 id rvInstructions
 id rvTurnLanes
 id save_image_matrix

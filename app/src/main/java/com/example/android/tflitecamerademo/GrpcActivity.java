@@ -23,11 +23,14 @@ import net.razorvine.pickle.objects.ByteArrayConstructor;
 import android.app.Activity;
 import android.content.Context;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 //import android.support.v7.app.AppCompatActivity;
+import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
@@ -46,17 +49,20 @@ import com.example.android.tflitecamerademo.ImageClassGrpc.ImageClassStub;
 
 
 import com.google.protobuf.ByteString;
+import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.lang.ref.WeakReference;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.text.MessageFormat;
 
 public class GrpcActivity extends Activity {
-    private EditText hostEdit;
-    private EditText portEdit;
+//    private EditText hostEdit;
+//    private EditText portEdit;
     private Button startRouteGuideButton;
     private Button exitRouteGuideButton;
     private Button getFeatureButton;
@@ -65,34 +71,46 @@ public class GrpcActivity extends Activity {
     private TextView resultText;
     private ManagedChannel channel;
     private Bitmap image;
+    public Uri mFileUri = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_routeguide);
-        hostEdit = (EditText) findViewById(R.id.host_edit_text);
-        portEdit = (EditText) findViewById(R.id.port_edit_text);
+//        hostEdit = (EditText) findViewById(R.id.host_edit_text);
+//        portEdit = (EditText) findViewById(R.id.port_edit_text);
         startRouteGuideButton = (Button) findViewById(R.id.start_route_guide_button);
         exitRouteGuideButton = (Button) findViewById(R.id.exit_route_guide_button);
         getFeatureButton = (Button) findViewById(R.id.get_feature_button);
         resultText = (TextView) findViewById(R.id.result_text);
+        Intent intent = getIntent();
+
+        mFileUri = intent.getData();
+
+
+
         resultText.setMovementMethod(new ScrollingMovementMethod());
+        imageView = findViewById(R.id.grpc_image);
+        Picasso.get().load(mFileUri).fit().into(imageView);
+        imageView.setImageURI(mFileUri);
         disableButtons();
     }
 
     public void startRouteGuide(View view) {
-        String host = hostEdit.getText().toString();
-        String portStr = portEdit.getText().toString();
-        int port = TextUtils.isEmpty(portStr) ? 0 : Integer.valueOf(portStr);
-        ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
-                .hideSoftInputFromWindow(hostEdit.getWindowToken(), 0);
+//        String host = hostEdit.getText().toString();
+//        String portStr = portEdit.getText().toString();
+//        int port = TextUtils.isEmpty(portStr) ? 0 : Integer.valueOf(portStr);
+//        ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+//                .hideSoftInputFromWindow(hostEdit.getWindowToken(), 0);
+        String host = "192.168.8.102";
 
-
+            int port = 50051;
 
         // her eis where the channel is opened
         channel = ManagedChannelBuilder.forAddress(host, port).usePlaintext().build();
-        hostEdit.setEnabled(false);
-        portEdit.setEnabled(false);
+//        hostEdit.setEnabled(false);
+//        portEdit.setEnabled(false);
         startRouteGuideButton.setEnabled(false);
         enableButtons();
     }
@@ -103,8 +121,8 @@ public class GrpcActivity extends Activity {
     public void exitRouteGuide(View view) {
         channel.shutdown();
         disableButtons();
-        hostEdit.setEnabled(true);
-        portEdit.setEnabled(true);
+//        hostEdit.setEnabled(true);
+//        portEdit.setEnabled(true);
         startRouteGuideButton.setEnabled(true);
     }
 
@@ -208,7 +226,15 @@ public class GrpcActivity extends Activity {
 
         private String getFeature( ImageClassBlockingStub blockingStub)
                 throws StatusRuntimeException, IOException {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.stage1);
+//            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.stage1);
+            Bitmap bitmap =
+                    null;
+            try {
+            bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),mFileUri);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
             if(bitmap==null){
 

@@ -181,6 +181,11 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
                 Log.d(LOG_TAG, "Button GrpcActivity !");
 
                 Intent intent = new Intent(this, GrpcActivity.class);
+                // here is were asend the image url to the GrpcActivity
+
+                Uri uri = Uri.parse(image.imagePath);
+                intent.setData(uri);
+
                 startActivity(intent);
             } else {
 
@@ -197,6 +202,14 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
 
             }
         };
+        ImageListAdapter.HosListener hosListener =  (v) -> {
+//                showNoticeDialog();
+            // here is were asend the image url to the GrpcActivity
+            startActivity(new Intent(this, HospitalActivity.class));
+
+
+        };
+
 
         ImageListAdapter.ButtonListener buttonListener = (v, position1) -> {
             position = position1;
@@ -235,8 +248,10 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
 
 
         ImageListAdapter.Delete butn = new ImageListAdapter.Delete() {
+
+
             @Override
-            public void deleteOnClick(View v, Image position1) {
+            public void onClick(View v, Image position1) {
                 position = position1;
 //                showNoticeDialog();
                 try {
@@ -263,7 +278,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
         };
 
 
-        mAdapter = new ImageListAdapter(listener, buttonListener, butn);
+        mAdapter = new ImageListAdapter(listener, buttonListener, butn , hosListener );
         mRecyclerView.setAdapter(mAdapter);
         countDrawable = new CountDrawable();
 

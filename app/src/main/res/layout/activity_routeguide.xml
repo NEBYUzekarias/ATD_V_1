@@ -4,78 +4,77 @@
     tools:context=".GrpcActivity"
     android:orientation="vertical" >
 
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <EditText
-            android:id="@+id/host_edit_text"
-            android:layout_weight="2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="Enter Host" />
-        <EditText
-            android:id="@+id/port_edit_text"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:hint="Enter Port" />
-    </LinearLayout>
+        android:layout_height="wrap_content">
 
-    <LinearLayout style="?android:buttonBarStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button style="?android:buttonBarButtonStyle"
-            android:id="@+id/start_route_guide_button"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:onClick="startRouteGuide"
-            android:text="Start Route Guide" />
-        <Button style="?android:buttonBarButtonStyle"
-            android:id="@+id/exit_route_guide_button"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:onClick="exitRouteGuide"
-            android:text="Exit Route Guide" />
-    </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/get_feature_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="getFeature"
-        android:text="Get Feature" />
+            <ImageView
+                android:id="@+id/grpc_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
 
-    <Button
-        android:id="@+id/list_features_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="listFeatures"
-        android:text="List Features" />
+            <LinearLayout style="?android:buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-    <Button
-        android:id="@+id/record_route_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="recordRoute"
-        android:text="Record Route" />
+                android:orientation="horizontal">
+                <Button style="?android:buttonBarButtonStyle"
+                    android:id="@+id/start_route_guide_button"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="startRouteGuide"
+                    android:text="Start Route Guide" />
+                <Button style="?android:buttonBarButtonStyle"
+                    android:id="@+id/exit_route_guide_button"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="exitRouteGuide"
+                    android:text="Exit Route Guide" />
+            </LinearLayout>
 
-    <Button
-        android:id="@+id/route_chat_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="routeChat"
-        android:text="Route Chat" />
+            <Button
+                android:id="@+id/get_feature_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="getFeature"
+                android:text="Get Feature" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/result_text"
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars = "vertical"
-        android:textSize="16sp" />
+        >
+        <LinearLayout
+            android:orientation="vertical"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/result_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars = "vertical"
+                android:textSize="56sp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
 
 </LinearLayout>
