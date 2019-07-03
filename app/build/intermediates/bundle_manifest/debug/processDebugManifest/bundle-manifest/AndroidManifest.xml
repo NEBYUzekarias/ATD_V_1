@@ -107,6 +107,10 @@
             android:name="com.squareup.picasso.PicassoProvider"
             android:authorities="android.example.com.tflitecamerademo.com.squareup.picasso"
             android:exported="false" />
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="android.example.com.tflitecamerademo.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
     </application>
 
 </manifest>

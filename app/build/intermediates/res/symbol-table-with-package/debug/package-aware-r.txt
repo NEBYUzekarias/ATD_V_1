@@ -1253,6 +1253,7 @@ drawable firebase_lockup_400
 drawable gradient_shadow_down
 drawable gradient_shadow_up
 drawable hospital
+drawable hospital_icon
 drawable ic_action_info
 drawable ic_add
 drawable ic_add_a_photo_black_24dp
@@ -1418,6 +1419,9 @@ drawable turn_lane_background
 drawable wayname_text_background
 drawable yene
 id ALT
+id Biruh
+id Biruh_map
+id Biruhtxt
 id CTRL
 id FUNCTION
 id META
@@ -1463,6 +1467,9 @@ id arrivalTimeText
 id async
 id attributionView
 id auto
+id bahirdar
+id bahirdar_map
+id bahirtxt
 id barrier
 id beginning
 id black
@@ -1538,7 +1545,6 @@ id group_divider
 id groups
 id grpc_image
 id guideline
-id hawasa
 id home
 id homeAsUp
 id home_toolbar
@@ -1548,6 +1554,8 @@ id ic_group_count
 id icon
 id icon_group
 id ifRoom
+id im_bahir
+id im_biruh
 id im_black
 id im_data1
 id im_data2
@@ -1584,7 +1592,6 @@ id map
 id mapView
 id masked
 id media_actions
-id mekele
 id message
 id middle
 id mini

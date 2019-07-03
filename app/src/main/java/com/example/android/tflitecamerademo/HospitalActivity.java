@@ -67,6 +67,35 @@ public class HospitalActivity extends AppCompatActivity {
 
     }
 
+    public void shashemene(View view) {
+        double[] lon = {38.656973, 7.254671};
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("longt",lon);
+
+        startActivity(intent);
+
+    }
+
+
+    public void biruh(View view) {
+        double[] lon = {38.823568, 9.019295};
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("longt",lon);
+
+        startActivity(intent);
+
+    }
+    public void bahir(View view) {
+        double[] lon = {37.377933, 11.610154};
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("longt",lon);
+
+        startActivity(intent);
+
+    }
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onCreateOptionsMenu(menu);

@@ -176,8 +176,9 @@
                     <ImageView
                         android:id="@+id/im_shash"
                         android:foregroundGravity="center_horizontal"
-                        android:layout_width="300dp"
+                        android:layout_width="match_parent"
                         android:layout_height="150dp"
+                        android:scaleType="centerCrop"
                         android:clickable="true"
                         android:layout_margin="5dp"
                         android:focusable="true"
@@ -192,7 +193,7 @@
                         android:layout_margin="5dp"
                         android:layout_below="@id/im_shash"
                         android:layout_alignRight="@id/Shashetxt"
-                        android:onClick="getFeature"
+                        android:onClick="shashemene"
 
                         android:clickable="true"
                         app:srcCompat="@drawable/ic_add_location_black_24dp"
@@ -209,22 +210,62 @@
                 android:layout_height="wrap_content"
                 style="@style/cardView">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
 
-            <TextView
-                android:id="@+id/hawasa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_margin"
-                android:layout_alignParentTop="true"
-                android:text="Shashemene  ሆስፒታል"
-                android:textAllCaps="true"
-                android:textSize="30sp"
-                android:textStyle="bold"/>
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/Biruh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/text_margin"
+                        android:layout_alignParentTop="true"
+                        android:text="Biruh Vision Specialized Eye Clinic"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/Biruhtxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/text_margin"
+                        android:layout_marginLeft="@dimen/text_margin"
+                        android:layout_marginRight="@dimen/text_margin"
+                        android:layout_below="@+id/Biruh"
+                        android:text="@string/stage2_description" />
+
+                    <ImageView
+                        android:id="@+id/im_biruh"
+                        android:foregroundGravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:clickable="true"
+                        android:layout_margin="5dp"
+                        android:focusable="true"
+                        android:layout_below="@id/Biruhtxt"
+                        app:srcCompat="@drawable/blacklion"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageView
+                        android:id="@+id/Biruh_map"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:layout_below="@id/im_biruh"
+                        android:layout_alignRight="@id/Biruhtxt"
+                        android:onClick="biruh"
+
+                        android:clickable="true"
+                        app:srcCompat="@drawable/ic_add_location_black_24dp"
+                        android:color="?attr/colorPrimary"
+                        android:focusable="true" />
+
+
+                </RelativeLayout>
 
 
             </androidx.cardview.widget.CardView>
@@ -240,19 +281,62 @@
                     >
 
                     <TextView
-                        android:id="@+id/mekele"
+                        android:id="@+id/bahirdar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/text_margin"
                         android:layout_alignParentTop="true"
-                        android:text="Shashemene  ሆስፒታል"
+                        android:text="Vision Lower Eye Clinic, Bahir Dar"
                         android:textAllCaps="true"
-                        android:textSize="30sp"
-                        android:textStyle="bold"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/bahirtxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/text_margin"
+                        android:layout_marginLeft="@dimen/text_margin"
+                        android:layout_marginRight="@dimen/text_margin"
+                        android:layout_below="@+id/bahirdar"
+                        android:text="@string/stage2_description" />
+
+                    <ImageView
+                        android:id="@+id/im_bahir"
+                        android:foregroundGravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:clickable="true"
+                        android:layout_margin="5dp"
+                        android:focusable="true"
+                        android:layout_below="@id/bahirtxt"
+                        app:srcCompat="@drawable/blacklion"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageView
+                        android:id="@+id/bahirdar_map"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:layout_below="@id/im_bahir"
+                        android:layout_alignRight="@id/bahirtxt"
+                        android:onClick="bahir"
+
+                        android:clickable="true"
+                        app:srcCompat="@drawable/ic_add_location_black_24dp"
+                        android:color="?attr/colorPrimary"
+                        android:focusable="true" />
+
+
                 </RelativeLayout>
 
 
             </androidx.cardview.widget.CardView>
+
+
 
         </LinearLayout>
     </ScrollView>

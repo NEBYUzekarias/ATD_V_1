@@ -103,7 +103,7 @@ public class GrpcActivity extends Activity {
 //        int port = TextUtils.isEmpty(portStr) ? 0 : Integer.valueOf(portStr);
 //        ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
 //                .hideSoftInputFromWindow(hostEdit.getWindowToken(), 0);
-        String host = "192.168.8.102";
+        String host = "192.168.8.101";
 
             int port = 50051;
 

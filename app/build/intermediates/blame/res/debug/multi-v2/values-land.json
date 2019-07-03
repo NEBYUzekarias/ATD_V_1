@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/apple/Documents/finalProject/ATD_V_1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/Users/macbookpro/Desktop/finalprojects/ATD_V_1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/500249e1330b819aa65ec640f19ec48b/res/values-land/values-land.xml",
+                    "source": "/Users/macbookpro/.gradle/caches/transforms-2/files-2.1/e600e8c43128f302ff85ae9d90ea71d3/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,17 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/07af8723dc2b4cbf5fa3d99451bc848b/res/values-land/values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,125,196",
-                        "endColumns": "69,70,67",
-                        "endOffsets": "120,191,259"
-                    }
-                },
-                {
-                    "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/4e6d6929191c5132c2ecc1a170e61a8a/res/values-land/values-land.xml",
+                    "source": "/Users/macbookpro/.gradle/caches/transforms-2/files-2.1/7c1eb46cb9988575415a535a5c657a21/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5,6",
                         "startColumns": "4,4,4,4,4",
@@ -47,6 +37,16 @@
                         "startOffsets": "264,321,382,447,505",
                         "endColumns": "56,60,64,57,50",
                         "endOffsets": "316,377,442,500,551"
+                    }
+                },
+                {
+                    "source": "/Users/macbookpro/.gradle/caches/transforms-2/files-2.1/4ea6232358b8cf779c436095fdf827bc/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
                     }
                 }
             ]

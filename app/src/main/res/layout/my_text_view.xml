@@ -52,7 +52,7 @@
                 android:layout_marginBottom="@dimen/text_margin"
                 android:layout_weight="0.25"
                 android:scaleType="centerCrop"
-                android:src="@drawable/hospital"
+                android:src="@drawable/hospital_icon"
                 android:transitionName="image" />
 
         </LinearLayout>
